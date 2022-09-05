@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(BlogDemoContext))]
-    [Migration("20220905083354_Initial")]
-    partial class Initial
+    [Migration("20220905090803_Relationships")]
+    partial class Relationships
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -69,6 +69,9 @@ namespace DataAccess.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("BlogId"));
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("text");
@@ -92,6 +95,8 @@ namespace DataAccess.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("BlogId");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Blogs");
                 });
@@ -128,6 +133,9 @@ namespace DataAccess.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CommentId"));
 
+                    b.Property<int>("BlogId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("text");
@@ -147,6 +155,8 @@ namespace DataAccess.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("CommentId");
+
+                    b.HasIndex("BlogId");
 
                     b.ToTable("Comments");
                 });
@@ -220,6 +230,38 @@ namespace DataAccess.Migrations
                     b.HasKey("WriterId");
 
                     b.ToTable("Writers");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.Blog", b =>
+                {
+                    b.HasOne("Entities.Concrete.Category", "Category")
+                        .WithMany("Blogs")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.Comment", b =>
+                {
+                    b.HasOne("Entities.Concrete.Blog", "Blog")
+                        .WithMany("Comments")
+                        .HasForeignKey("BlogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Blog");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.Blog", b =>
+                {
+                    b.Navigation("Comments");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.Category", b =>
+                {
+                    b.Navigation("Blogs");
                 });
 #pragma warning restore 612, 618
         }
