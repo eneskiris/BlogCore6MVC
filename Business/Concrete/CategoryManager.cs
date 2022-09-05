@@ -1,43 +1,40 @@
 using Business.Abstract;
-using DataAccess.Repositories;
+using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 
 namespace Business.Concrete;
 
 public class CategoryManager : ICategoryService
 {
-    private CategoryRepository _categoryRepository = new();
+    private EfCategoryRepository _efCategoryRepository;
+
+    public CategoryManager()
+    {
+        _efCategoryRepository = new EfCategoryRepository();
+    }
 
     public void CategoryAdd(Category category)
     {
-        if (category.CategoryName != "" && category.Description != "" && category.CategoryName.Length >= 5 &&
-            category.Status == true)
-        {
-            _categoryRepository.AddCategory(category);
-        }
-        else
-        {
-            //Hata mesajı
-        }
+        _efCategoryRepository.Insert(category);
     }
 
     public void CategoryDelete(Category category)
     {
-        throw new NotImplementedException();
+        _efCategoryRepository.Delete(category);
     }
 
     public void CategoryUpdate(Category category)
     {
-        throw new NotImplementedException();
+        _efCategoryRepository.Update(category);
     }
 
     public List<Category> GetList()
     {
-        throw new NotImplementedException();
+        return _efCategoryRepository.GettAll();
     }
 
     public Category GetById(int id)
     {
-        throw new NotImplementedException();
+        return _efCategoryRepository.GetById(id);
     }
 }
