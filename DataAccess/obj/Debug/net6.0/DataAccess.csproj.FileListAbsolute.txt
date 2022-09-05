@@ -1,0 +1,14 @@
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/bin/Debug/net6.0/DataAccess.deps.json
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/bin/Debug/net6.0/DataAccess.runtimeconfig.json
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/bin/Debug/net6.0/DataAccess.dll
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/bin/Debug/net6.0/DataAccess.pdb
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/DataAccess.csproj.AssemblyReference.cache
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/DataAccess.AssemblyInfoInputs.cache
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/DataAccess.AssemblyInfo.cs
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/DataAccess.csproj.CoreCompileInputs.cache
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/DataAccess.dll
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/refint/DataAccess.dll
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/DataAccess.pdb
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/DataAccess.genruntimeconfig.cache
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/ref/DataAccess.dll
