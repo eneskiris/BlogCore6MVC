@@ -12,3 +12,6 @@
 /Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/DataAccess.pdb
 /Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/DataAccess.genruntimeconfig.cache
 /Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/ref/DataAccess.dll
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/bin/Debug/net6.0/Entities.dll
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/bin/Debug/net6.0/Entities.pdb
+/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/Debug/net6.0/DataAccess.csproj.CopyComplete
