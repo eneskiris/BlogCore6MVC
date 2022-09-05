@@ -1,13 +1,24 @@
 using Business.Abstract;
+using DataAccess.Repositories;
 using Entities.Concrete;
 
 namespace Business.Concrete;
 
 public class CategoryManager : ICategoryService
 {
+    private CategoryRepository _categoryRepository = new();
+
     public void CategoryAdd(Category category)
     {
-        throw new NotImplementedException();
+        if (category.CategoryName != "" && category.Description != "" && category.CategoryName.Length >= 5 &&
+            category.Status == true)
+        {
+            _categoryRepository.AddCategory(category);
+        }
+        else
+        {
+            //Hata mesajı
+        }
     }
 
     public void CategoryDelete(Category category)
