@@ -7,6 +7,6 @@ public class Blog
     public string Content { get; set; }
     public string ThumbnailImage { get; set; }
     public string Image { get; set; }
-    public string Date { get; set; }
+    public string CreateDate { get; set; }
     public bool Status { get; set; }
 }
