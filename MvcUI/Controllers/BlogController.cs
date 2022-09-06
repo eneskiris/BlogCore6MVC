@@ -1,12 +1,15 @@
+using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MvcUI.Controllers;
 
 public class BlogController : Controller
 {
-    // GET
+    private BlogManager _blogManager = new BlogManager(new EfBlogRepository());
     public IActionResult Index()
     {
-        return View();
+        var values = _blogManager.GetList();
+        return View(values);
     }
 }
