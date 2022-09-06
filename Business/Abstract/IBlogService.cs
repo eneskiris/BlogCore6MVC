@@ -9,4 +9,5 @@ public interface IBlogService
     void BlogUpdate(Blog blog);
     List<Blog> GetList();
     Blog GetById(int id);
+    List<Blog> GetListWithCategory();
 }
