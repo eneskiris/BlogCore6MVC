@@ -33,6 +33,26 @@ public class BlogRepository : IBlogDal
         context.SaveChanges();
     }
 
+    public void Insert(Blog entity)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Delete(Blog entity)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Update(Blog entity)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<Blog> GettAll()
+    {
+        throw new NotImplementedException();
+    }
+
     public Blog GetById(int id)
     {
         using var context = new BlogDemoContext();

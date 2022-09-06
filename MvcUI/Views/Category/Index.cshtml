@@ -1,0 +1,26 @@
+@model System.Collections.Generic.List<Entities.Concrete.Category>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Category Id</th>
+        <th>Category Name</th>
+        <th>Category Status</th>
+        <th>Category Details</th>
+        <th>Category Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryId</td>
+            <td>@item.CategoryName</td>
+            <td>@item.Status</td>
+            <td><a href="#" class="btn btn-warning">Details</a></td>
+            <td><a href="#" class="btn btn-danger">Delete</a></td>
+        </tr>
+    }
+</table>

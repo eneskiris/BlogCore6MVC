@@ -1,12 +1,15 @@
+using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MvcUI.Controllers;
 
 public class CategoryController : Controller
 {
-    // GET
+    private CategoryManager _categoryManager = new CategoryManager(new EfCategoryRepository());
     public IActionResult Index()
     {
-        return View();
+        var getList = _categoryManager.GetList();
+        return View(getList);
     }
 }

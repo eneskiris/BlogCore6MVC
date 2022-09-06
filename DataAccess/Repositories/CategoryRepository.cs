@@ -31,6 +31,26 @@ public class CategoryRepository : ICategoryDal
         _blogDemoContext.SaveChanges();
     }
 
+    public void Insert(Category entity)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Delete(Category entity)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Update(Category entity)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<Category> GettAll()
+    {
+        throw new NotImplementedException();
+    }
+
     public Category GetById(int id)
     {
         return _blogDemoContext.Categories.Find(id);
