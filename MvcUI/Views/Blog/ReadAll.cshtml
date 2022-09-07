@@ -53,7 +53,9 @@
             <a asp-controller="Blog" asp-action="Index" class="btn btn-primary read-m">Read More</a>
         </div>
     }
-    <partial name="~/Views/Comment/PartialCommentList.cshtml"></partial>
+
+    @await Component.InvokeAsync("CommentList")
+    @* <partial name="~/Views/Comment/PartialCommentList.cshtml"></partial> *@
     <partial name="~/Views/Comment/PartialAddComment.cshtml"></partial>
 
 </div>
