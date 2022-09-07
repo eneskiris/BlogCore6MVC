@@ -1,9 +1,12 @@
+using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MvcUI.Controllers;
 
 public class CommentController : Controller
 {
+    CommentManager _commentManager = new CommentManager(new EfCommentRepository());
     // GET
     // public IActionResult Index()
     // {
@@ -14,8 +17,9 @@ public class CommentController : Controller
     {
         return PartialView();
     }    
-    public PartialViewResult PartialCommentList()
+    public PartialViewResult PartialCommentList(int id)
     {
-        return PartialView();
+        var values = _commentManager.GetListByBlogId(id);
+        return PartialView(values);
     }
 }

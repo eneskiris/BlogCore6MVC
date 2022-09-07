@@ -27,7 +27,7 @@ public class GenericRepository<TEntity> : IGenericDal<TEntity> where TEntity : c
         _context.SaveChanges();
     }
 
-    public List<TEntity> GettAll(Expression<Func<TEntity, bool>> filter = null)
+    public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
     {
         using var _context = new BlogDemoContext();
         return filter==null
