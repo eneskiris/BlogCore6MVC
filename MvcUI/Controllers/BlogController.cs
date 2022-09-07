@@ -12,4 +12,9 @@ public class BlogController : Controller
         var values = _blogManager.GetListWithCategory();
         return View(values);
     }
+
+    public IActionResult Details(int id)
+    {
+        return View();
+    }
 }

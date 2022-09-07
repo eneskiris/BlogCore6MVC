@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using DataAccess.Abstract;
 using DataAccess.Concrete;
 
@@ -26,15 +27,20 @@ public class GenericRepository<TEntity> : IGenericDal<TEntity> where TEntity : c
         _context.SaveChanges();
     }
 
-    public List<TEntity> GettAll()
+    public List<TEntity> GettAll(Expression<Func<TEntity, bool>> filter = null)
     {
         using var _context = new BlogDemoContext();
-        return _context.Set<TEntity>().ToList();
+        return filter==null
+                   ? _context.Set<TEntity>().ToList()
+                   : _context.Set<TEntity>().Where(filter).ToList();
     }
+
 
     public TEntity GetById(int id)
     {
         using var _context = new BlogDemoContext();
         return _context.Set<TEntity>().Find(id);
     }
+
+
 }
