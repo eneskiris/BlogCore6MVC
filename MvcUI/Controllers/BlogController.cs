@@ -13,8 +13,9 @@ public class BlogController : Controller
         return View(values);
     }
 
-    public IActionResult Details(int id)
+    public IActionResult ReadAll(int id)
     {
-        return View();
+        var values = _blogManager.GetBlogById(id);
+        return View(values);
     }
 }
