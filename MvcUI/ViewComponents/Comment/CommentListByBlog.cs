@@ -7,9 +7,9 @@ namespace MvcUI.ViewComponents.Comment;
 public class CommentListByBlog : ViewComponent
 {
     private CommentManager _commentManager = new CommentManager(new EfCommentRepository());
-    public IViewComponentResult Invoke()
+    public IViewComponentResult Invoke(int id)
     {
-        var values = _commentManager.GetListByBlogId(4);
+        var values = _commentManager.GetListByBlogId(id);
         return View(values);
     }
 }

@@ -15,6 +15,7 @@ public class BlogController : Controller
 
     public IActionResult ReadAll(int id)
     {
+        ViewBag.Id = id;
         var values = _blogManager.GetBlogById(id);
         return View(values);
     }
