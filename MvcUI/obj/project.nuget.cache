@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "wprQ5fa6iffGb4W7b2dCfrzA6kA5R0rcSQXM4OLhojxHAAJKgdg1kcc6ePefGBjkC7uk12Y8WqcG+CmjUk5BjQ==",
+  "dgSpecHash": "NTJVocQVyu0Nd/Ht14/f8QIvM3vt6VgJb5e1VUGCZcQsNhHytke2bumqHXtE+w8/j9olGC4u8Zkxih1+dyu7vg==",
   "success": true,
   "projectFilePath": "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/MvcUI.csproj",
   "expectedPackageFiles": [
     "/Users/eneskiris/.nuget/packages/azure.core/1.20.0/azure.core.1.20.0.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/azure.identity/1.5.0/azure.identity.1.5.0.nupkg.sha512",
+    "/Users/eneskiris/.nuget/packages/fluentvalidation/11.2.1/fluentvalidation.11.2.1.nupkg.sha512",
+    "/Users/eneskiris/.nuget/packages/fluentvalidation.aspnetcore/11.2.2/fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "/Users/eneskiris/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.1/fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/microsoft.bcl.asyncinterfaces/1.0.0/microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/microsoft.data.sqlclient/5.0.0-preview2.22096.2/microsoft.data.sqlclient.5.0.0-preview2.22096.2.nupkg.sha512",

@@ -78,3 +78,7 @@
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/obj/Debug/net6.0/MvcUI.pdb
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/obj/Debug/net6.0/MvcUI.genruntimeconfig.cache
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/obj/Debug/net6.0/ref/MvcUI.dll
+/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/FluentValidation.dll
+/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/obj/Debug/net6.0/MvcUI.MvcApplicationPartsAssemblyInfo.cs

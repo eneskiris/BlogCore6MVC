@@ -22,8 +22,7 @@
                                 <ul class="blog-icons my-4">
                                     <li>
                                         <a href="#">
-                                            <i class="far fa-calendar-alt"></i> @(((DateTime)item.CreateDate)
-                                                                                      .ToString("yyyy-M-d dddd"))
+                                            <i class="far fa-calendar-alt"></i> @(((DateTime)item.CreateDate).ToString("yyyy-M-d dddd"))
                                         </a>
                                     </li>
                                     <li class="mx-2">
@@ -42,8 +41,7 @@
                                     <a asp-controller="Blog" asp-action="ReadAll" asp-route-id="@item.BlogId">@item.Title</a>
                                 </h5>
                                 <p class="card-text mb-3">
-                                    @item.Content.Substring(0, item.Content.Substring(0, 130)
-                                                                   .LastIndexOf(" "))...
+                                    @item.Content.Substring(0, item.Content.Substring(0, 130).LastIndexOf(" "))...
                                 </p>
                                 <a asp-controller="Blog" asp-action="ReadAll" asp-route-id="@item.BlogId" class="btn 
                                 btn-primary read-m">
