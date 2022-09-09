@@ -11,4 +11,5 @@ public interface IBlogService
     Blog GetById(int id);
     List<Blog> GetListWithCategory();
     List<Blog> GetBlogById(int id);
+    List<Blog> GetBlogByWriter(int id);
 }
