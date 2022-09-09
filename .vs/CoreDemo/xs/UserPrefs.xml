@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{A020DE84-3E7D-4A3C-807D-F9EBB819D911}|CoreDemo">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Controllers/NewsLetterController.cs" relfile="MvcUI/Controllers/NewsLetterController.cs" line="19" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MvcUI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MvcUI/Controllers/NewsLetterController.cs">
+    <Files>
+      <File FileName="MvcUI/Controllers/NewsLetterController.cs" Line="1" Column="1" />
+      <File FileName="MvcUI/Views/NewsLetter/SubscribeMail.cshtml" Line="10" Column="57" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CoreDemo" expanded="True">
+            <Node name="MvcUI" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="NewsLetter" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

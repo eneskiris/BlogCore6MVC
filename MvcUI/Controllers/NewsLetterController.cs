@@ -14,7 +14,7 @@ public class NewsLetterController : Controller
     {
         return PartialView();
     }
-
+    
     [HttpPost]
     public PartialViewResult SubscribeMail(NewsLetter newsLetter)
     {

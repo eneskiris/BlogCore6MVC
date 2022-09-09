@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zlcyho+2Ec+uMrB8cco06+JXavlAcj/Bjp3n0Tpdbac=",
+  "Hash": "Y2spZhhpO9tyw6oVcYLDSvByqAGDW/fgujFigIMhKwA=",
   "Source": "MvcUI",
   "BasePath": "_content/MvcUI",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/obj/Debug/net6.0/scopedcss/projectbundle/MvcUI.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/wwwroot/.DS_Store",
+      "SourceId": "MvcUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/wwwroot/",
+      "BasePath": "_content/MvcUI",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/wwwroot/css/site.css",

@@ -1,1 +1,24 @@
-<h1>MAIL ALANI</h1>
+<div class="tech-btm">
+    <h4>Sign up to our newsletter</h4>
+    <p>Sign up for our free email newsletter to be notified of new blogs. </p>
+    <form method="post">
+        <input id="mail" name="Mail" type="email" placeholder="Email" required="">
+        <input id="submit" type="submit" value="Subscribe">
+    </form>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+<script >
+    $(document).ready(function () {
+        $("#submit").click(function () {
+            var mail = $("#mail").val();
+            $.ajax({
+                url: "/NewsLetter/SubscribeMail/",
+                type: "POST",
+                data: { Mail: mail },
+                // success: function (result) {
+                //     alert(result);
+                // }
+        });
+    })});
+</script>
