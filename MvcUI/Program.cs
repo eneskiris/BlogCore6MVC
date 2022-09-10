@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 
@@ -10,6 +11,9 @@ builder.Services.AddMvcCore(config =>
                                 var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
                                 config.Filters.Add(new AuthorizeFilter(policy));
                             });
+builder.Services.AddMvcCore();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+       .AddCookie(x => { x.LoginPath = "/Login/Index"; });
 builder.Services.AddSession();
 
 var app = builder.Build();
