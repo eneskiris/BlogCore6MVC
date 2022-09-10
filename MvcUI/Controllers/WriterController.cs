@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace MvcUI.Controllers;
 public class WriterController : Controller
 {
-    // GET
+    [AllowAnonymous]
     public IActionResult Index()
     {
         return View();

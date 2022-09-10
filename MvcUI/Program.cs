@@ -10,6 +10,7 @@ builder.Services.AddMvcCore(config =>
                                 var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
                                 config.Filters.Add(new AuthorizeFilter(policy));
                             });
+builder.Services.AddSession();
 
 var app = builder.Build();
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
@@ -25,6 +26,7 @@ if (!app.Environment.IsDevelopment())
 app.UseStatusCodePagesWithReExecute("/ErrorPage/Error404", "?statusCode={0}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseSession();
 
 app.UseRouting();
 
