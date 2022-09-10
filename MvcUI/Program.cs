@@ -14,7 +14,7 @@ builder.Services.AddMvcCore(config =>
 builder.Services.AddMvcCore();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
        .AddCookie(x => { x.LoginPath = "/Login/Index"; });
-builder.Services.AddSession();
+// builder.Services.AddSession();
 
 var app = builder.Build();
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
@@ -30,10 +30,10 @@ if (!app.Environment.IsDevelopment())
 app.UseStatusCodePagesWithReExecute("/ErrorPage/Error404", "?statusCode={0}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseSession();
+// app.UseSession();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
