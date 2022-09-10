@@ -1,25 +1,45 @@
 ﻿<Properties StartupConfiguration="{A020DE84-3E7D-4A3C-807D-F9EBB819D911}|CoreDemo">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MvcUI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Controllers/NewsLetterController.cs" relfile="MvcUI/Controllers/NewsLetterController.cs" line="19" column="1" />
+      <Breakpoint file="/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Controllers/CommentController.cs" relfile="MvcUI/Controllers/CommentController.cs" line="24" column="1" />
+      <Breakpoint file="/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Views/Comment/PartialAddComment.cshtml" relfile="MvcUI/Views/Comment/PartialAddComment.cshtml" line="14" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MvcUI PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MvcUI/Controllers/NewsLetterController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MvcUI/Views/Comment/PartialAddComment.cshtml">
     <Files>
-      <File FileName="MvcUI/Controllers/NewsLetterController.cs" Line="1" Column="1" />
-      <File FileName="MvcUI/Views/NewsLetter/SubscribeMail.cshtml" Line="10" Column="57" />
+      <File FileName="MvcUI/Controllers/CommentController.cs" Line="24" Column="1" />
+      <File FileName="MvcUI/Controllers/BlogController.cs" Line="9" Column="1" />
+      <File FileName="MvcUI/Views/Comment/PartialAddComment.cshtml" Line="20" Column="1" />
+      <File FileName="MvcUI/Views/Blog/ReadAll.cshtml" Line="72" Column="1" />
+      <File FileName="Entities/Concrete/Comment.cs" Line="13" Column="1" />
+      <File FileName="MvcUI/Views/Shared/UserLayout.cshtml" Line="74" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CoreDemo" expanded="True">
+            <Node name="Business" expanded="True">
+              <Node name="Concrete" expanded="True" />
+            </Node>
+            <Node name="DataAccess" expanded="True">
+              <Node name="Repositories" expanded="True" />
+            </Node>
+            <Node name="Entities" expanded="True">
+              <Node name="Concrete" expanded="True" />
+            </Node>
             <Node name="MvcUI" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="Blog" expanded="True" />
+                <Node name="Comment" expanded="True">
+                  <Node name="PartialAddComment.cshtml" selected="True" />
+                </Node>
                 <Node name="NewsLetter" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -30,5 +50,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

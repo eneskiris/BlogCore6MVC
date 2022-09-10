@@ -23,7 +23,6 @@ public class CommentController : Controller
     {
         comment.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
         comment.Status = true;
-        comment.BlogId = 2; 
         _commentManager.CommentAdd(comment);
         return PartialView();
     }    
