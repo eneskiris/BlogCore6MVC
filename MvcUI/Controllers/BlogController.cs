@@ -1,9 +1,10 @@
 using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MvcUI.Controllers;
-
+[AllowAnonymous]
 public class BlogController : Controller
 {
     private BlogManager _blogManager = new BlogManager(new EfBlogRepository());
