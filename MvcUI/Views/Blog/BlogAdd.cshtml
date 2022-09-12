@@ -20,7 +20,7 @@
     @Html.ValidationMessageFor(x => x.ThumbnailImage, "", new { @class = "text-danger" })
     <br>    
     <label>Category</label>
-    <input type="text" class="form-control" asp-for="CategoryId" required="">
+    <select asp-items="@ViewBag.CategoryValues" asp-for="CategoryId" class="form-control"></select>
     @Html.ValidationMessageFor(x => x.CategoryId, "", new { @class = "text-danger" })
     <br>    
     <label>Content</label>
