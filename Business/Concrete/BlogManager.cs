@@ -12,20 +12,19 @@ public class BlogManager : IBlogService
     {
         _blogDal = blogDal;
     }
-
-    public void BlogAdd(Blog blog)
+    public void Add(Blog entity)
     {
-        _blogDal.Insert(blog);
+        _blogDal.Insert(entity);
     }
 
-    public void BlogDelete(Blog blog)
+    public void Delete(Blog entity)
     {
-        _blogDal.Delete(blog);
+        _blogDal.Delete(entity);
     }
 
-    public void BlogUpdate(Blog blog)
+    public void Update(Blog entity)
     {
-        _blogDal.Update(blog);
+        _blogDal.Update(entity);
     }
 
     public List<Blog> GetList()
@@ -43,7 +42,7 @@ public class BlogManager : IBlogService
         return _blogDal.GetListWithCategory();
     }
 
-    public List<Blog> GetBlogById(int id)
+    public List<Blog> GetBlogListById(int id)
     {
         return _blogDal.GetAll(x => x.BlogId == id);
     }

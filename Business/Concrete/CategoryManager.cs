@@ -12,20 +12,19 @@ public class CategoryManager : ICategoryService
     {
         _categoryDal = categoryDal;
     }
-
-    public void CategoryAdd(Category category)
+    public void Add(Category entity)
     {
-        _categoryDal.Insert(category);
+        _categoryDal.Insert(entity);
     }
 
-    public void CategoryDelete(Category category)
+    public void Delete(Category entity)
     {
-        _categoryDal.Delete(category);
+        _categoryDal.Delete(entity);
     }
 
-    public void CategoryUpdate(Category category)
+    public void Update(Category entity)
     {
-        _categoryDal.Update(category);
+        _categoryDal.Update(entity);
     }
 
     public List<Category> GetList()
