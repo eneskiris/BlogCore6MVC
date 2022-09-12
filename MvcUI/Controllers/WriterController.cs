@@ -11,6 +11,11 @@ public class WriterController : Controller
     public IActionResult WriterProfile()
     {
         return View();
+    }
+    [AllowAnonymous]
+    public IActionResult Test()
+    {
+        return View();
     }    
 
 }

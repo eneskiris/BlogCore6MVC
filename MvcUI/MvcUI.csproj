@@ -17,4 +17,9 @@
       <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\writer-1\PSD\.DS_Store" />
+      <_ContentIncludedByDefault Remove="wwwroot\writer-1\PSD\Purple_dashboard_free.psd" />
+    </ItemGroup>
+
 </Project>

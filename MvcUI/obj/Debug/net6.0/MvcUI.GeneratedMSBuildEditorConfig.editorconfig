@@ -111,12 +111,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1VzZXJMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Views/Shared/WriterLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL1dyaXRlckxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Views/Writer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV3JpdGVyL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Views/Writer/Test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV3JpdGVyL1Rlc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Views/Writer/WriterProfile.cshtml]
