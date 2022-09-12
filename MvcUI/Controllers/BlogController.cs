@@ -1,5 +1,8 @@
 using Business.Concrete;
+using Business.ValidationRules;
 using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,5 +28,31 @@ public class BlogController : Controller
     {
         var values = _blogManager.GetBlogByWriter(1);
         return View(values);
+    }
+    [HttpGet]
+    public IActionResult BlogAdd()
+    {
+        return View();
+    }    
+    [HttpPost]
+    public IActionResult BlogAdd(Blog blog)
+    {
+        BlogValidator blogValidator = new BlogValidator();
+        ValidationResult validationResult = blogValidator.Validate(blog);
+        if (validationResult.IsValid)
+        {
+            blog.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            blog.Status = true;
+            blog.WriterId = 1;
+            _blogManager.Add(blog);
+            return RedirectToAction("BlogListByWriter", "Blog");
+        }
+
+        foreach (var item in validationResult.Errors)
+        {
+            ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+        }
+
+        return View();
     }
 }
