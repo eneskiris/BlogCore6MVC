@@ -127,6 +127,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV3JpdGVyL1Rlc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Views/Writer/WriterFooterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV3JpdGVyL1dyaXRlckZvb3RlclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Views/Writer/WriterNavbarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV3JpdGVyL1dyaXRlck5hdmJhclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Views/Writer/WriterProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV3JpdGVyL1dyaXRlclByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
