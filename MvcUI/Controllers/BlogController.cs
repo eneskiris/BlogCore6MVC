@@ -13,6 +13,8 @@ namespace MvcUI.Controllers;
 public class BlogController : Controller
 {
     private BlogManager _blogManager = new BlogManager(new EfBlogRepository());
+    private CategoryManager _categoryManager = new CategoryManager(new EfCategoryRepository());
+
 
     public IActionResult Index()
     {
@@ -36,14 +38,7 @@ public class BlogController : Controller
     [HttpGet]
     public IActionResult BlogAdd()
     {
-        CategoryManager _categoryManager = new CategoryManager(new EfCategoryRepository());
-        List<SelectListItem> categoryvalues = (from x in _categoryManager.GetList()
-                                               select new SelectListItem
-                                               {
-                                                   Text = x.CategoryName,
-                                                   Value = x.CategoryId.ToString()
-                                               }).ToList();
-        ViewBag.CategoryValues = categoryvalues;
+        CategoryValues();
         return View();
     }
 
@@ -75,22 +70,15 @@ public class BlogController : Controller
         _blogManager.Delete(value);
         return RedirectToAction("BlogListByWriter", "Blog");
     }
-    
+
     [HttpGet]
     public IActionResult Update(int id)
     {
-        CategoryManager _categoryManager = new CategoryManager(new EfCategoryRepository());
-        List<SelectListItem> categoryvalues = (from x in _categoryManager.GetList()
-                                               select new SelectListItem
-                                               {
-                                                   Text = x.CategoryName,
-                                                   Value = x.CategoryId.ToString()
-                                               }).ToList();
-        ViewBag.CategoryValues = categoryvalues;
+        CategoryValues();
         var value = _blogManager.GetById(id);
         return View(value);
     }
-    
+
     [HttpPost]
     public IActionResult Update(Blog blog)
     {
@@ -111,5 +99,16 @@ public class BlogController : Controller
         }
 
         return View();
+    }
+
+    private void CategoryValues()
+    {
+        List<SelectListItem> categoryvalues = (from x in _categoryManager.GetList()
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.CategoryName,
+                                                   Value = x.CategoryId.ToString()
+                                               }).ToList();
+        ViewBag.CategoryValues = categoryvalues;
     }
 }
