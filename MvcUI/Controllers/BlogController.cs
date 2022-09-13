@@ -75,4 +75,41 @@ public class BlogController : Controller
         _blogManager.Delete(value);
         return RedirectToAction("BlogListByWriter", "Blog");
     }
+    
+    [HttpGet]
+    public IActionResult Update(int id)
+    {
+        CategoryManager _categoryManager = new CategoryManager(new EfCategoryRepository());
+        List<SelectListItem> categoryvalues = (from x in _categoryManager.GetList()
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.CategoryName,
+                                                   Value = x.CategoryId.ToString()
+                                               }).ToList();
+        ViewBag.CategoryValues = categoryvalues;
+        var value = _blogManager.GetById(id);
+        return View(value);
+    }
+    
+    [HttpPost]
+    public IActionResult Update(Blog blog)
+    {
+        BlogValidator blogValidator = new BlogValidator();
+        ValidationResult validationResult = blogValidator.Validate(blog);
+        if (validationResult.IsValid)
+        {
+            blog.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            blog.Status = true;
+            blog.WriterId = 1;
+            _blogManager.Update(blog);
+            return RedirectToAction("BlogListByWriter", "Blog");
+        }
+
+        foreach (var item in validationResult.Errors)
+        {
+            ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+        }
+
+        return View();
+    }
 }

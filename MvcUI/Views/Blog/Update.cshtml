@@ -1,0 +1,32 @@
+@model Entities.Concrete.Blog
+
+@{
+    ViewBag.Title = "title";
+    Layout = "WriterLayout";
+}
+
+<form asp-action="Update" asp-controller="Blog" method="post">
+    <label>Blog Id</label>
+    <input readonly="readonly" class="form-control" asp-for="BlogId" required="">
+    <label>Title</label>
+    <input type="text" class="form-control" asp-for="Title" required="">
+    @Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+    <br>    
+    <label>Image</label>
+    <input type="text" class="form-control" asp-for="Image" required="">
+    @Html.ValidationMessageFor(x => x.Image, "", new { @class = "text-danger" })
+    <br>    
+    <label>Thumbnail Image</label>
+    <input type="text" class="form-control" asp-for="ThumbnailImage" required="">
+    @Html.ValidationMessageFor(x => x.ThumbnailImage, "", new { @class = "text-danger" })
+    <br>    
+    <label>Category</label>
+    <select asp-items="@ViewBag.CategoryValues" asp-for="CategoryId" class="form-control"></select>
+    @Html.ValidationMessageFor(x => x.CategoryId, "", new { @class = "text-danger" })
+    <br>    
+    <label>Content</label>
+    <textarea type="text" class="form-control" asp-for="Content" rows="4" cols="50" required=""></textarea>
+    @Html.ValidationMessageFor(x => x.Content, "", new { @class = "text-danger" })
+    <br>
+    <button class="btn btn-primary">Update Blog</button>
+</form>
