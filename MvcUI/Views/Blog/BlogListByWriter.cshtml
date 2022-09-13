@@ -22,9 +22,18 @@
         <tr>
             <td>@item.BlogId</td>
             <td>@item.Title</td>
-            <td>@item.CreateDate</td>
-            <td>@item.CategoryId</td>
-            <td>@item.Status</td>
+            <td>@item.CreateDate.ToString("yyyy-M-d dddd")</td>
+            <td>@item.Category.CategoryName</td>
+            <td>
+                @if (item.Status)
+                {
+                    <span class="badge badge-success">Active</span>
+                }
+                else
+                {
+                    <span class="badge badge-secondary">Inactive</span>
+                }
+            </td>
             <td>
                 <a href="" class="btn btn-danger">Delete</a>
             </td>

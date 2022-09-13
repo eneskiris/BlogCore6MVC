@@ -7,4 +7,5 @@ public interface IBlogService : IGenericService<Blog>
     List<Blog> GetListWithCategory();
     List<Blog> GetBlogListById(int id);
     List<Blog> GetBlogByWriter(int id);
+    List<Blog> GetListWithCategoryByWriter(int id);
 }

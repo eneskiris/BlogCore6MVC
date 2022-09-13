@@ -40,6 +40,10 @@ public class BlogManager : IBlogService
     public List<Blog> GetListWithCategory()
     {
         return _blogDal.GetListWithCategory();
+    }    
+    public List<Blog> GetListWithCategoryByWriter(int id)
+    {
+        return _blogDal.GetListWithCategoryByWriter(id);
     }
 
     public List<Blog> GetBlogListById(int id)
