@@ -5,7 +5,8 @@
     Layout = "WriterLayout";
 }
 
-<h1>Author's Blogs</h1>
+<h1>Author's Blogs </h1>
+<h2>@ViewBag.Id</h2>
 
 <table class="table table-bordered">
     <tr>
@@ -35,7 +36,9 @@
                 }
             </td>
             <td>
-                <a href="" class="btn btn-danger">Delete</a>
+                <a itemId="@item.BlogId" id="deleteItem" class="btn btn-danger">
+                    Delete
+                </a>
             </td>
             <td>
                 <a href="" class="btn btn-warning">Update</a>
@@ -44,3 +47,37 @@
     }
 </table>
 <a asp-action="BlogAdd" asp-controller="Blog" class="btn btn-primary">New Blog</a>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+let buttons = document.querySelectorAll('#deleteItem');
+buttons.forEach(button => {
+    button.addEventListener('click', function () {
+    Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            }
+        }).then(() => {
+            let id = button.getAttribute('itemId');
+            let row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+            $.ajax({
+                type: "POST",
+                url: "/Blog/Delete",
+                data: { id: id },
+            });
+        })
+});
+});
+</script>
