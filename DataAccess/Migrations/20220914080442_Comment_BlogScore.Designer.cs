@@ -3,6 +3,7 @@ using System;
 using DataAccess.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(BlogDemoContext))]
-    partial class BlogDemoContextModelSnapshot : ModelSnapshot
+    [Migration("20220914080442_Comment_BlogScore")]
+    partial class Comment_BlogScore
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -101,28 +103,6 @@ namespace DataAccess.Migrations
                     b.HasIndex("WriterId");
 
                     b.ToTable("Blogs");
-                });
-
-            modelBuilder.Entity("Entities.Concrete.BlogRating", b =>
-                {
-                    b.Property<int>("BlogRatingId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("BlogRatingId"));
-
-                    b.Property<int>("BlogId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("BlogRatingCount")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("BlogTotalScore")
-                        .HasColumnType("integer");
-
-                    b.HasKey("BlogRatingId");
-
-                    b.ToTable("BlogRatings");
                 });
 
             modelBuilder.Entity("Entities.Concrete.Category", b =>
