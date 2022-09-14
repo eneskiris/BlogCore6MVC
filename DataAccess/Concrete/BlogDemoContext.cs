@@ -7,7 +7,7 @@ public class BlogDemoContext : DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Server=127.0.0.1;Port=5432;Database=BlogDemo;User Id=postgres;Password=enes35;");
+        optionsBuilder.UseSqlServer(@"Server=localhost;Database=BlogDemo;User=sa;Password=Enes35.*;");
     }
 
     public DbSet<About> Abouts { get; set; }
