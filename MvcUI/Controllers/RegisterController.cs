@@ -26,7 +26,7 @@ public class RegisterController : Controller
         {
             writer.Status = true;
             writer.About = "Test";
-            _writerManager.WriterAdd(writer);
+            _writerManager.Add(writer);
             return RedirectToAction("Index", "Blog");
         }
 

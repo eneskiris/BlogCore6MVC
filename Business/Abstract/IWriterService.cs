@@ -2,7 +2,7 @@ using Entities.Concrete;
 
 namespace Business.Abstract;
 
-public interface IWriterService
+public interface IWriterService : IGenericService<Writer>
 {
-    void WriterAdd(Writer writer);
+    List<Writer> GetWriterListById(int id);
 }
