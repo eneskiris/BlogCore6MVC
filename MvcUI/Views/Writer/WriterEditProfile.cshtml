@@ -13,23 +13,33 @@
                 <br>
                 <form class="forms-sample">
                     <div class="form-group">
-                        <label for="exampleInputName1">Full Name</label>
-                        <input asp-for="FullName" type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                        <input asp-for="WriterId" type="hidden" class="form-control">
+                    </div>
+                    @Html.ValidationMessageFor(x => x.WriterId, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Full Name</label>
+                        <input asp-for="FullName" type="text" class="form-control"
+                               id="exampleInputName1">
+                        @Html.ValidationMessageFor(x => x.FullName, "", new { @class = "text-danger" })
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail3">Email address</label>
                         <input asp-for="Email" type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                        @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword4">Password</label>
-                        <input asp-for="Password" type="password" class="form-control" id="exampleInputPassword4" 
-                        placeholder="Password">
+                        <input asp-for="Password" type="password" class="form-control" id="exampleInputPassword4"
+                               placeholder="Password">
+                        @Html.ValidationMessageFor(x => x.Password, "", new { @class = "text-danger" })
                     </div>
                     <div class="form-group">
                         <label>Avatar</label>
                         <input type="file" name="img[]" class="file-upload-default">
                         <div class="input-group col-xs-12">
-                            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                            <input asp-for="Image" type="text" class="form-control file-upload-info" disabled placeholder="Upload 
+                            Image">
+                            @Html.ValidationMessageFor(x => x.Image, "", new { @class = "text-danger" })
                             <span class="input-group-append">
                                 <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
                             </span>
@@ -38,6 +48,7 @@
                     <div class="form-group">
                         <label for="exampleTextarea1">About Me</label>
                         <textarea asp-for="About" class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                        @Html.ValidationMessageFor(x => x.About, "", new { @class = "text-danger" })
                     </div>
                     <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
@@ -45,5 +56,4 @@
             </div>
         </div>
     </div>
-
 </form>
