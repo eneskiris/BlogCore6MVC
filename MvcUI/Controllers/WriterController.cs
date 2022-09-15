@@ -5,6 +5,7 @@ using Entities.Concrete;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MvcUI.Models;
 
 namespace MvcUI.Controllers;
 public class WriterController : Controller
@@ -54,4 +55,27 @@ public class WriterController : Controller
         }
         return View();
     }
+    
+    [AllowAnonymous, HttpGet]
+    public IActionResult WriterAdd()
+    {
+        return View();
+    }   
+    
+    [AllowAnonymous, HttpPost]
+    public IActionResult WriterAdd(Writer writer, IFormFile image)
+    {
+        var extension = Path.GetExtension(image.FileName);
+        var randomName = Guid.NewGuid() + extension;
+        var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/WriterImageFiles/", randomName);
+        using (var stream = new FileStream(path, FileMode.Create))
+        {
+            image.CopyTo(stream);
+        }
+        writer.Image = randomName;
+        writer.Status = true;
+        _writerManager.Add(writer);
+        return RedirectToAction("Index", "Dashboard");
+    }
+
 }

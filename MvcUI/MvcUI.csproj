@@ -22,4 +22,8 @@
       <_ContentIncludedByDefault Remove="wwwroot\writer-1\PSD\Purple_dashboard_free.psd" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\WriterImageFiles" />
+    </ItemGroup>
+
 </Project>
