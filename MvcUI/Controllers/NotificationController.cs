@@ -5,8 +5,8 @@ namespace MvcUI.Controllers;
 public class NotificationController : Controller
 {
     // GET
-    public IActionResult Index()
-    {
-        return View();
-    }
+    // public IActionResult Index()
+    // {
+    //     return View();
+    // }
 }
