@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(BlogDemoContext))]
-    [Migration("20220916054650_Notification_Table")]
+    [Migration("20220916060219_Notification_Table")]
     partial class Notification_Table
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -260,9 +260,8 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Type")
                         .IsRequired()

@@ -30,7 +30,7 @@ public class NotificationManager : INotificationService
 
     public List<Notification> GetList()
     {
-        throw new NotImplementedException();
+        return _notificationDal.GetAll();
     }
 
     public Notification GetById(int id)

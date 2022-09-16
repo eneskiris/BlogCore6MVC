@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "//IrKW1KGCUxR3IStIyBuF9xhg50PB/BE5SeNs1Xf4A=",
+  "Hash": "2MyHyFvskxCfCM6GlL3VZcaL4e8gLdsfWUe3eYYr2Uk=",
   "Source": "MvcUI",
   "BasePath": "_content/MvcUI",
   "Mode": "Default",
@@ -5047,6 +5047,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/writer/screenshot.jpg"
+    },
+    {
+      "Identity": "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/wwwroot/WriterImageFiles/e31f3eab-f196-45b4-981e-c287603945a4.png",
+      "SourceId": "MvcUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/wwwroot/",
+      "BasePath": "_content/MvcUI",
+      "RelativePath": "WriterImageFiles/e31f3eab-f196-45b4-981e-c287603945a4.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/WriterImageFiles/e31f3eab-f196-45b4-981e-c287603945a4.png"
     }
   ]
 }
