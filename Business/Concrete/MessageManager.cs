@@ -42,6 +42,6 @@ public class MessageManager : IMessageService
 
     public List<Message> GetListInboxByWriter(string parameter)
     {
-        return _messageDal.GetAll(x=>x.Receiver==parameter);
+        return _messageDal.GetAll(x => x.Receiver == parameter);
     }
 }
