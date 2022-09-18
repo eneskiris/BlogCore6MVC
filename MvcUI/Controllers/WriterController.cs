@@ -19,8 +19,11 @@ public class WriterController : Controller
         _writerService = writerService;
     }
 
+    [Authorize]
     public IActionResult Index()
     {
+        var writer= _writerService.GetWriterByEmail(User.Identity.Name);
+        ViewBag.UserEmail = writer.Email;
         return View();
     }
 

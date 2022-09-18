@@ -30,7 +30,7 @@ public class WriterManager : IWriterService
 
     public List<Writer> GetList()
     {
-        throw new NotImplementedException();
+        return _writerDal.GetAll();
     }
 
     public Writer GetById(int id)
@@ -41,5 +41,10 @@ public class WriterManager : IWriterService
     public List<Writer> GetWriterListById(int id)
     {
         return _writerDal.GetAll(x => x.WriterId == id);
+    }
+
+    public Writer GetWriterByEmail(string email)
+    {
+        return _writerDal.GetWriterByEmail(email);
     }
 }

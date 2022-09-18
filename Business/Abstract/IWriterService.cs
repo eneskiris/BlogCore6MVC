@@ -5,4 +5,5 @@ namespace Business.Abstract;
 public interface IWriterService : IGenericService<Writer>
 {
     List<Writer> GetWriterListById(int id);
+    Writer GetWriterByEmail(string email);
 }
