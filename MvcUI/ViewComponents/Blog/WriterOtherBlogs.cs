@@ -1,3 +1,4 @@
+using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
@@ -7,11 +8,16 @@ namespace MvcUI.ViewComponents.Blog;
 
 public class WriterOtherBlogs : ViewComponent
 {
-    private BlogManager _blogManager = new BlogManager(new EfBlogRepository());
+    private IBlogService _blogService;
+
+    public WriterOtherBlogs(IBlogService blogService)
+    {
+        _blogService = blogService;
+    }
 
     public IViewComponentResult Invoke()
     {
-        var values = _blogManager.GetBlogByWriter(1);
+        var values = _blogService.GetBlogByWriter(1);
         return View(values);
     }
 }

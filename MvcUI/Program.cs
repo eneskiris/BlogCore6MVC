@@ -27,6 +27,9 @@ builder.Services.AddSingleton<IMessageDal, EfMessageRepository>();
 builder.Services.AddSingleton<IContactService,ContactManager>();
 builder.Services.AddSingleton<IContactDal,EfContactRepository>();
 
+builder.Services.AddSingleton<IMessageWithWriterService,MessageWithWriterManager>();
+builder.Services.AddSingleton<IMessageWithWriterDal,EfMessageWithWriterRepository>();
+
 builder.Services.AddSingleton<INewsLetterService,NewsLetterManager>();
 builder.Services.AddSingleton<INewsLetterDal,EfNewsLetterRepository>();
 
