@@ -1,3 +1,4 @@
+using Business.Abstract;
 using Business.Concrete;
 using Business.ValidationRules;
 using DataAccess.Concrete.EntityFramework;
@@ -12,26 +13,33 @@ namespace MvcUI.Controllers;
 [AllowAnonymous]
 public class BlogController : Controller
 {
-    private BlogManager _blogManager = new BlogManager(new EfBlogRepository());
-    private CategoryManager _categoryManager = new CategoryManager(new EfCategoryRepository());
+    private IBlogService _blogService;
+    private ICategoryService _categoryService;
+    private BlogValidator blogValidator = new BlogValidator();
+    private ValidationResult validationResult = new ValidationResult();
 
+    public BlogController(IBlogService blogService, ICategoryService categoryService)
+    {
+        _blogService = blogService;
+        _categoryService = categoryService;
+    }
 
     public IActionResult Index()
     {
-        var values = _blogManager.GetListWithCategory();
+        var values = _blogService.GetListWithCategory();
         return View(values);
     }
 
     public IActionResult ReadAll(int id)
     {
         ViewBag.Id = id;
-        var values = _blogManager.GetBlogListById(id);
+        var values = _blogService.GetBlogListById(id);
         return View(values);
     }
 
     public IActionResult BlogListByWriter()
     {
-        var values = _blogManager.GetListWithCategoryByWriter(1);
+        var values = _blogService.GetListWithCategoryByWriter(1);
         return View(values);
     }
 
@@ -45,14 +53,13 @@ public class BlogController : Controller
     [HttpPost]
     public IActionResult BlogAdd(Blog blog)
     {
-        BlogValidator blogValidator = new BlogValidator();
-        ValidationResult validationResult = blogValidator.Validate(blog);
+        validationResult = blogValidator.Validate(blog);
         if (validationResult.IsValid)
         {
             blog.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             blog.Status = true;
             blog.WriterId = 1;
-            _blogManager.Add(blog);
+            _blogService.Add(blog);
             return RedirectToAction("BlogListByWriter", "Blog");
         }
 
@@ -66,8 +73,8 @@ public class BlogController : Controller
 
     public IActionResult Delete(int id)
     {
-        var value = _blogManager.GetById(id);
-        _blogManager.Delete(value);
+        var value = _blogService.GetById(id);
+        _blogService.Delete(value);
         return RedirectToAction("BlogListByWriter", "Blog");
     }
 
@@ -75,21 +82,20 @@ public class BlogController : Controller
     public IActionResult Update(int id)
     {
         CategoryValues();
-        var value = _blogManager.GetById(id);
+        var value = _blogService.GetById(id);
         return View(value);
     }
 
     [HttpPost]
     public IActionResult Update(Blog blog)
     {
-        BlogValidator blogValidator = new BlogValidator();
-        ValidationResult validationResult = blogValidator.Validate(blog);
+        validationResult = blogValidator.Validate(blog);
         if (validationResult.IsValid)
         {
             blog.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             blog.Status = true;
             blog.WriterId = 1;
-            _blogManager.Update(blog);
+            _blogService.Update(blog);
             return RedirectToAction("BlogListByWriter", "Blog");
         }
 
@@ -103,7 +109,7 @@ public class BlogController : Controller
 
     private void CategoryValues()
     {
-        List<SelectListItem> categoryvalues = (from x in _categoryManager.GetList()
+        List<SelectListItem> categoryvalues = (from x in _categoryService.GetList()
                                                select new SelectListItem
                                                {
                                                    Text = x.CategoryName,

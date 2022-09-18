@@ -1,3 +1,4 @@
+using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Authorization;
@@ -7,7 +8,13 @@ namespace MvcUI.Controllers;
 
 public class NotificationController : Controller
 {
-    NotificationManager _notificationManager = new NotificationManager(new EfNotificationRepository());
+    INotificationService _notificationService;
+
+    public NotificationController(INotificationService notificationService)
+    {
+        _notificationService = notificationService;
+    }
+
     public IActionResult Index()
     {
         return View();
@@ -16,7 +23,7 @@ public class NotificationController : Controller
     [AllowAnonymous]
     public IActionResult AllNotifications()
     {
-        var values = _notificationManager.GetList();
+        var values = _notificationService.GetList();
         return View(values);
     }
 }

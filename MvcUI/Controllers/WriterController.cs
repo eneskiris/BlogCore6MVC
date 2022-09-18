@@ -1,3 +1,4 @@
+using Business.Abstract;
 using Business.Concrete;
 using Business.ValidationRules;
 using DataAccess.Concrete.EntityFramework;
@@ -8,13 +9,21 @@ using Microsoft.AspNetCore.Mvc;
 using MvcUI.Models;
 
 namespace MvcUI.Controllers;
+
 public class WriterController : Controller
 {
-    WriterManager _writerManager = new WriterManager(new EfWriterRepository());
+    IWriterService _writerService;
+
+    public WriterController(IWriterService writerService)
+    {
+        _writerService = writerService;
+    }
+
     public IActionResult Index()
     {
         return View();
-    }    
+    }
+
     public IActionResult WriterProfile()
     {
         return View();
@@ -23,7 +32,8 @@ public class WriterController : Controller
     public PartialViewResult WriterNavbarPartial()
     {
         return PartialView();
-    }    
+    }
+
     public PartialViewResult WriterFooterPartial()
     {
         return PartialView();
@@ -32,9 +42,10 @@ public class WriterController : Controller
     [AllowAnonymous, HttpGet]
     public IActionResult WriterEditProfile()
     {
-        var values = _writerManager.GetById(1);
+        var values = _writerService.GetById(1);
         return View(values);
-    }    
+    }
+
     [AllowAnonymous, HttpPost]
     public IActionResult WriterEditProfile(Writer writer)
     {
@@ -43,7 +54,7 @@ public class WriterController : Controller
         if (result.IsValid)
         {
             writer.Status = true;
-            _writerManager.Update(writer);
+            _writerService.Update(writer);
             return RedirectToAction("Index", "Dashboard");
         }
         else
@@ -53,15 +64,16 @@ public class WriterController : Controller
                 ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
             }
         }
+
         return View();
     }
-    
+
     [AllowAnonymous, HttpGet]
     public IActionResult WriterAdd()
     {
         return View();
-    }   
-    
+    }
+
     [AllowAnonymous, HttpPost]
     public IActionResult WriterAdd(Writer writer, IFormFile image)
     {
@@ -72,10 +84,10 @@ public class WriterController : Controller
         {
             image.CopyTo(stream);
         }
+
         writer.Image = randomName;
         writer.Status = true;
-        _writerManager.Add(writer);
+        _writerService.Add(writer);
         return RedirectToAction("Index", "Dashboard");
     }
-
 }

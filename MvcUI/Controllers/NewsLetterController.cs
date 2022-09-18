@@ -1,3 +1,4 @@
+using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
@@ -7,7 +8,12 @@ namespace MvcUI.Controllers;
 
 public class NewsLetterController : Controller
 {
-    private NewsLetterManager _newsLetterManager = new NewsLetterManager(new EfNewsLetterRepository());
+    INewsLetterService _newsLetterService;
+
+    public NewsLetterController(INewsLetterService newsLetterService)
+    {
+        _newsLetterService = newsLetterService;
+    }
 
     [HttpGet]
     public PartialViewResult SubscribeMail()
@@ -19,7 +25,7 @@ public class NewsLetterController : Controller
     public PartialViewResult SubscribeMail(NewsLetter newsLetter)
     {
         newsLetter.Status = true;
-        _newsLetterManager.AddNewsLetter(newsLetter);
+        _newsLetterService.AddNewsLetter(newsLetter);
         return PartialView();
     }
 }

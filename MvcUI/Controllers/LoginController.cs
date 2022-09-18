@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using Business.Abstract;
 using DataAccess.Concrete;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Authentication;
@@ -9,6 +10,13 @@ namespace MvcUI.Controllers;
 
 public class LoginController : Controller
 {
+    private IWriterService _writerService;
+
+    public LoginController(IWriterService writerService)
+    {
+        _writerService = writerService;
+    }
+
     [AllowAnonymous]
     public IActionResult Index()
     {
@@ -19,8 +27,7 @@ public class LoginController : Controller
     [AllowAnonymous]
     public async Task<IActionResult>  Index(Writer writer)
     {
-        BlogDemoContext _blogDemoContext = new BlogDemoContext();
-        var datavalue = _blogDemoContext.Writers.FirstOrDefault(x=>x.Email == writer.Email && x.Password == writer.Password);
+        var datavalue = _writerService.GetList().FirstOrDefault(x=>x.Email == writer.Email && x.Password == writer.Password);
         if (datavalue!=null)
         {
             var claims = new List<Claim>

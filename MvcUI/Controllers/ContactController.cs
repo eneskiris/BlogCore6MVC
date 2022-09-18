@@ -1,3 +1,4 @@
+using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
@@ -7,7 +8,13 @@ namespace MvcUI.Controllers;
 
 public class ContactController : Controller
 {
-    ContactManager _contactManager = new ContactManager(new EfContactRepository());
+    private IContactService _contactService;
+
+    public ContactController(IContactService contactService)
+    {
+        _contactService = contactService;
+    }
+
     [HttpGet]
     public IActionResult Index()
     {
@@ -18,7 +25,7 @@ public class ContactController : Controller
     {
         contact.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
         contact.Status = true;
-        _contactManager.ContactAdd(contact);
+        _contactService.ContactAdd(contact);
         return RedirectToAction("Index", "Blog");
     }
 

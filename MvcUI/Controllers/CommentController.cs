@@ -1,3 +1,4 @@
+using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
@@ -7,12 +8,17 @@ namespace MvcUI.Controllers;
 
 public class CommentController : Controller
 {
-    CommentManager _commentManager = new CommentManager(new EfCommentRepository());
+    private ICommentService _commentService;
     // GET
     // public IActionResult Index()
     // {
     //     return View();
     // }
+    public CommentController(ICommentService commentService)
+    {
+        _commentService = commentService;
+    }
+
     [HttpGet]
     public PartialViewResult PartialAddComment()
     {
@@ -23,12 +29,12 @@ public class CommentController : Controller
     {
         comment.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
         comment.Status = true;
-        _commentManager.CommentAdd(comment);
+        _commentService.CommentAdd(comment);
         return PartialView();
     }    
     public PartialViewResult PartialCommentList(int id)
     {
-        var values = _commentManager.GetListByBlogId(id);
+        var values = _commentService.GetListByBlogId(id);
         return PartialView(values);
     }
 }

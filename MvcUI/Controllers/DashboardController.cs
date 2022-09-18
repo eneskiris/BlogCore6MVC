@@ -1,3 +1,4 @@
+using Business.Abstract;
 using DataAccess.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -6,13 +7,21 @@ namespace MvcUI.Controllers;
 
 public class DashboardController : Controller
 {
+    private ICategoryService _categoryService;
+    private IBlogService _blogService;
+
+    public DashboardController(ICategoryService categoryService, IBlogService blogService)
+    {
+        _categoryService = categoryService;
+        _blogService = blogService;
+    }
+
     [AllowAnonymous]
     public IActionResult Index()
     {
-        BlogDemoContext context = new BlogDemoContext();
-        ViewBag.BlogsCount = context.Blogs.Count();
-        ViewBag.WriterBlogsCount = context.Blogs.Count(x => x.WriterId == 1);
-        ViewBag.CategoriesCount = context.Categories.Count();
+        ViewBag.BlogsCount = _blogService.GetList().Count;
+        ViewBag.WriterBlogsCount = _blogService.GetList().Count(x => x.WriterId == 1);
+        ViewBag.CategoriesCount = _categoryService.GetList().Count;
         
         return View();
     }

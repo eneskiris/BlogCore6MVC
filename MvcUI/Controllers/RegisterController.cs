@@ -1,3 +1,4 @@
+using Business.Abstract;
 using Business.Concrete;
 using Business.ValidationRules;
 using DataAccess.Concrete.EntityFramework;
@@ -9,7 +10,12 @@ namespace MvcUI.Controllers;
 
 public class RegisterController : Controller
 {
-    WriterManager _writerManager = new WriterManager(new EfWriterRepository());
+    IWriterService _writerService;
+
+    public RegisterController(IWriterService writerService)
+    {
+        _writerService = writerService;
+    }
 
     [HttpGet]
     public IActionResult Index()
@@ -26,7 +32,7 @@ public class RegisterController : Controller
         {
             writer.Status = true;
             writer.About = "Test";
-            _writerManager.Add(writer);
+            _writerService.Add(writer);
             return RedirectToAction("Index", "Blog");
         }
 
