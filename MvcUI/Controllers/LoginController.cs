@@ -1,6 +1,5 @@
 using System.Security.Claims;
 using Business.Abstract;
-using DataAccess.Concrete;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -37,7 +36,7 @@ public class LoginController : Controller
             var useridentity = new ClaimsIdentity(claims,"a");
             ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);
             await HttpContext.SignInAsync(principal);
-            return RedirectToAction("Index", "Writer");
+            return RedirectToAction("Index", "Dashboard");
         }
         return View();
     }

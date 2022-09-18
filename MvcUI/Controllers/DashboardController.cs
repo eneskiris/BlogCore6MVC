@@ -1,6 +1,4 @@
 using Business.Abstract;
-using DataAccess.Concrete;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MvcUI.Controllers;
@@ -16,7 +14,6 @@ public class DashboardController : Controller
         _blogService = blogService;
     }
 
-    [AllowAnonymous]
     public IActionResult Index()
     {
         ViewBag.BlogsCount = _blogService.GetList().Count;

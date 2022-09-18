@@ -1,6 +1,4 @@
 using Business.Abstract;
-using Business.Concrete;
-using DataAccess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MvcUI.ViewComponents.Writer;
@@ -16,7 +14,7 @@ public class WriterAboutOnDashboard : ViewComponent
 
     public IViewComponentResult Invoke()
     {
-        var values = _writerService.GetWriterListById(1);
-        return View(values);
+        var writer= _writerService.GetWriterByEmail(User.Identity.Name);
+        return View(writer);
     }
 }

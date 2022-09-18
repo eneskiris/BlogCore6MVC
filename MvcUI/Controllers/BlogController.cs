@@ -1,27 +1,25 @@
 using Business.Abstract;
-using Business.Concrete;
 using Business.ValidationRules;
-using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using FluentValidation.Results;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MvcUI.Controllers;
 
-[AllowAnonymous]
 public class BlogController : Controller
 {
     private IBlogService _blogService;
     private ICategoryService _categoryService;
+    private IWriterService _writerService;
     private BlogValidator blogValidator = new BlogValidator();
     private ValidationResult validationResult = new ValidationResult();
 
-    public BlogController(IBlogService blogService, ICategoryService categoryService)
+    public BlogController(IBlogService blogService, ICategoryService categoryService, IWriterService writerService)
     {
         _blogService = blogService;
         _categoryService = categoryService;
+        _writerService = writerService;
     }
 
     public IActionResult Index()
@@ -39,8 +37,9 @@ public class BlogController : Controller
 
     public IActionResult BlogListByWriter()
     {
-        var values = _blogService.GetListWithCategoryByWriter(1);
-        return View(values);
+        var writer = _writerService.GetWriterByEmail(User.Identity.Name).WriterId;
+        var bloglistbywriter = _blogService.GetListWithCategoryByWriter(writer);
+        return View(bloglistbywriter);
     }
 
     [HttpGet]
@@ -58,7 +57,7 @@ public class BlogController : Controller
         {
             blog.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             blog.Status = true;
-            blog.WriterId = 1;
+            blog.WriterId = _writerService.GetWriterByEmail(User.Identity.Name).WriterId;
             _blogService.Add(blog);
             return RedirectToAction("BlogListByWriter", "Blog");
         }
@@ -94,7 +93,7 @@ public class BlogController : Controller
         {
             blog.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             blog.Status = true;
-            blog.WriterId = 1;
+            blog.WriterId = _writerService.GetWriterByEmail(User.Identity.Name).WriterId;
             _blogService.Update(blog);
             return RedirectToAction("BlogListByWriter", "Blog");
         }

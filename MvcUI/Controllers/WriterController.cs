@@ -1,12 +1,9 @@
 using Business.Abstract;
-using Business.Concrete;
 using Business.ValidationRules;
-using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MvcUI.Models;
 
 namespace MvcUI.Controllers;
 
@@ -42,14 +39,14 @@ public class WriterController : Controller
         return PartialView();
     }
 
-    [AllowAnonymous, HttpGet]
+    [HttpGet]
     public IActionResult WriterEditProfile()
     {
-        var values = _writerService.GetById(1);
-        return View(values);
+        var writer= _writerService.GetWriterByEmail(User.Identity.Name);
+        return View(writer);
     }
 
-    [AllowAnonymous, HttpPost]
+    [HttpPost]
     public IActionResult WriterEditProfile(Writer writer)
     {
         WriterValidator validator = new WriterValidator();
