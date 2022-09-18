@@ -40,6 +40,6 @@ public class MessageWithWriterManager : IMessageWithWriterService
 
     public List<MessageWithWriter> GetInboxListByWriter(int id)
     {
-        return _messageWithWriterDal.GetAll(x => x.ReceiverId == id);
+        return _messageWithWriterDal.GetListWithMessageByWriter(id);
     }
 }
