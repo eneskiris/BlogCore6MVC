@@ -35,7 +35,7 @@ public class MessageWithWriterManager : IMessageWithWriterService
 
     public MessageWithWriter GetById(int id)
     {
-        throw new NotImplementedException();
+        return _messageWithWriterDal.GetById(id);
     }
 
     public List<MessageWithWriter> GetInboxListByWriter(int id)

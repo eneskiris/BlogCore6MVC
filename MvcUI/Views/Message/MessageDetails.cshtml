@@ -1,0 +1,29 @@
+@model Entities.Concrete.MessageWithWriter
+
+@{
+    ViewBag.Title = "title";
+    Layout = "WriterLayout";
+}
+<h1>Message Detail</h1>
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Edit Profile</h4>
+            <br>
+            <div class="forms-sample">
+                <div class="form-group">
+                    <input asp-for="MessageId" type="hidden" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input asp-for="Subject" readonly="readonly" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Message Details</label>
+                    <textarea asp-for="Details" readonly="readonly" class="form-control"> </textarea>
+                </div>
+            </div>
+            <button class="btn btn-primary">Return To The Inbox</button>
+        </div>
+    </div>
+</div>
