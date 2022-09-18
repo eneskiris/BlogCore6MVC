@@ -10,4 +10,6 @@ public class Writer
     public string Password { get; set; }
     public bool Status { get; set; }
     public List<Blog> Blogs { get; set; }
+    public virtual ICollection<MessageWithWriter> WriterSender { get; set; }
+    public virtual ICollection<MessageWithWriter> WriterReceiver { get; set; }
 }
