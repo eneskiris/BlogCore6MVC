@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lgbOJIMLJ7Y9ymI0aDy+MF1kejjs2u0jusgN2GXUQt9aEl4R6krGPDKSNgZuPSmYydKVLOaUuIrXJvPJ8i7EaA==",
+  "dgSpecHash": "AFIaFN2X7cDdQzJu9RaXxGPNgg2TQp0yd1n9JcQVUMJQPsWH77ac0GL/zZEZM7x/EYn9gzXm8X7D+jvyoqeEfg==",
   "success": true,
   "projectFilePath": "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/DataAccess.csproj",
   "expectedPackageFiles": [
@@ -33,8 +33,6 @@
     "/Users/eneskiris/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/microsoft.win32.registry/4.7.0/microsoft.win32.registry.4.7.0.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "/Users/eneskiris/.nuget/packages/npgsql/6.0.6/npgsql.6.0.6.nupkg.sha512",
-    "/Users/eneskiris/.nuget/packages/npgsql.entityframeworkcore.postgresql/6.0.6/npgsql.entityframeworkcore.postgresql.6.0.6.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/system.configuration.configurationmanager/4.7.0/system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

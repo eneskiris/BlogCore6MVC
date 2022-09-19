@@ -16,6 +16,8 @@
     <ItemGroup>
       <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
+      <PackageReference Include="X.PagedList" Version="8.4.3" />
+      <PackageReference Include="X.PagedList.Mvc.Core" Version="8.4.3" />
     </ItemGroup>
 
     <ItemGroup>

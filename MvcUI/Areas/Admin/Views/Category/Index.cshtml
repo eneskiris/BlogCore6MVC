@@ -1,4 +1,6 @@
-@model List<Entities.Concrete.Category>
+@model IPagedList<Entities.Concrete.Category>
+@using X.PagedList
+@using X.PagedList.Mvc.Core
 @{
     Layout = "AdminLayout";
 }
@@ -28,3 +30,7 @@
         </tr>
     }
 </table>
+<br>
+<div class="text-center">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+</div>

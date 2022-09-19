@@ -53,8 +53,6 @@
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/Newtonsoft.Json.dll
-/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/Npgsql.dll
-/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/NuGet.Common.dll
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/NuGet.Configuration.dll
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/NuGet.DependencyResolver.Core.dll
@@ -270,3 +268,6 @@
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/obj/Debug/net6.0/MvcUI.pdb
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/obj/Debug/net6.0/MvcUI.genruntimeconfig.cache
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/obj/Debug/net6.0/ref/MvcUI.dll
+/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/JetBrains.Annotations.dll
+/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/X.PagedList.dll
+/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/X.PagedList.Mvc.Core.dll
