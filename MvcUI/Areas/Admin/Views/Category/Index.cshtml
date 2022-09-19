@@ -1,5 +1,30 @@
+@model List<Entities.Concrete.Category>
 @{
     Layout = "AdminLayout";
 }
-
-<h1>INDEX</h1>
+<h1>Categories</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Category Name</th>
+        <th>Passive</th>
+        <th>Active</th>
+        <th>Edit</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.CategoryId</th>
+            <td>@item.CategoryName</td>
+            <td>
+                <a class="btn btn-danger">Passive</a>
+            </td>
+            <td>
+                <a class="btn btn-warning">Active</a>
+            </td>
+            <td>
+                <a class="btn btn-success">Edit</a>
+            </td>
+        </tr>
+    }
+</table>
