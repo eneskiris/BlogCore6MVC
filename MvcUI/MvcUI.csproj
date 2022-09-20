@@ -24,6 +24,7 @@
     <ItemGroup>
       <_ContentIncludedByDefault Remove="wwwroot\writer-1\PSD\.DS_Store" />
       <_ContentIncludedByDefault Remove="wwwroot\writer-1\PSD\Purple_dashboard_free.psd" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Shared\Components\StatisticsPartTwo\Default.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
