@@ -30,6 +30,8 @@
         </tr>
     }
 </table>
+<a asp-area="Admin" asp-controller="Category" asp-action="AddCategory" class="btn btn-primary">New Blog</a>
+<br>
 <br>
 <div class="text-center">
     @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
