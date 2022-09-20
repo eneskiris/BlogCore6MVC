@@ -15,10 +15,10 @@ public class NotificationController : Controller
         _notificationService = notificationService;
     }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
+    // public IActionResult Index()
+    // {
+    //     return View();
+    // }
 
     [AllowAnonymous]
     public IActionResult AllNotifications()

@@ -48,5 +48,22 @@ namespace MvcUI.Areas.Admin.Controllers
 
             return View();
         }
+        
+        public IActionResult DeleteCategory(int id)
+        {
+            var category = _categoryService.GetById(id);
+            category.Status = false;
+            _categoryService.Update(category);
+            return RedirectToAction("Index", "Category");
+        }
+        
+        [HttpGet]
+        public IActionResult ActiveCategory(int id)
+        {
+            var category = _categoryService.GetById(id);
+            category.Status = true;
+            _categoryService.Update(category);
+            return RedirectToAction("Index");
+        }
     }
 }
