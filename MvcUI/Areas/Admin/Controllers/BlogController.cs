@@ -4,6 +4,7 @@ using MvcUI.Areas.Admin.Models;
 
 namespace MvcUI.Areas.Admin.Controllers;
 
+[Area("Admin")]
 public class BlogController : Controller
 {
     // GET
@@ -45,5 +46,10 @@ public class BlogController : Controller
             new BlogModel { Id = 3, BlogName = "2022 Yılında Yapılacak Olan Yeni Oyunlar" },
         };
         return blogModels;
+    }
+    
+    public IActionResult BlogListExcel()
+    {
+        return View();
     }
 }

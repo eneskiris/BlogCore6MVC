@@ -1,0 +1,15 @@
+@{
+    ViewBag.Title = "title";
+    Layout = "AdminLayout";
+}
+
+<h2>Blog List To Excel</h2>
+<br>
+<button class="btn btn-primary" onclick="DownloadExcelBlogList()">Download Excel List</button>
+
+<script >
+function DownloadExcelBlogList() {
+    var url = '@Url.Action("ExportStaticExcelBlogList", "Blog")';
+    window.location.href = url;
+}
+</script>

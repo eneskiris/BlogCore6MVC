@@ -271,3 +271,7 @@
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/JetBrains.Annotations.dll
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/X.PagedList.dll
 /Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/X.PagedList.Mvc.Core.dll
+/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/ClosedXML.dll
+/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/DocumentFormat.OpenXml.dll
+/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/ExcelNumberFormat.dll
+/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/bin/Debug/net6.0/System.IO.Packaging.dll
