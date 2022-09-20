@@ -1,4 +1,5 @@
 using ClosedXML.Excel;
+using DataAccess.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using MvcUI.Areas.Admin.Models;
 
@@ -8,13 +9,13 @@ namespace MvcUI.Areas.Admin.Controllers;
 public class BlogController : Controller
 {
     // GET
-    public IActionResult ExportStaticExcelBlogList()
+    public IActionResult ExportExcelBlogList()
     {
         using (var workbook = new XLWorkbook())
         {
             var worksheet = workbook.Worksheets.Add("Blog List");
             worksheet.Cell(1, 1).Value = "Blog Id";
-            worksheet.Cell(1, 2).Value = "Blog Name";
+            worksheet.Cell(1, 2).Value = "Blog Title";
 
             int blogRowCount = 2;
             foreach (var item in GetBlogList())
@@ -39,12 +40,15 @@ public class BlogController : Controller
 
     public List<BlogModel> GetBlogList()
     {
-        List<BlogModel> blogModels = new List<BlogModel>
+        List<BlogModel> blogModels = new List<BlogModel>();
+        using (var context = new BlogDemoContext())
         {
-            new BlogModel { Id = 1, BlogName = "C# Programlamaya Girişi" },
-            new BlogModel { Id = 2, BlogName = "Tesla Elektrikli Arabaları" },
-            new BlogModel { Id = 3, BlogName = "2022 Yılında Yapılacak Olan Yeni Oyunlar" },
-        };
+            blogModels = context.Blogs.Select(x => new BlogModel
+            {
+                Id = x.BlogId,
+                BlogName = x.Title
+            }).ToList();
+        }
         return blogModels;
     }
     
