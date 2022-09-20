@@ -32,7 +32,7 @@ public class MessageManager : IMessageService
 
     public List<Message> GetList()
     {
-        throw new NotImplementedException();
+        return _messageDal.GetAll();
     }
 
     public Message GetById(int id)
