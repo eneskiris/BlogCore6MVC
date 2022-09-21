@@ -27,6 +27,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ2F0ZWdvcnkvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Areas/Admin/Views/Chart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ2hhcnQvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/Areas/Admin/Views/Shared/AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU2hhcmVkL0FkbWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
