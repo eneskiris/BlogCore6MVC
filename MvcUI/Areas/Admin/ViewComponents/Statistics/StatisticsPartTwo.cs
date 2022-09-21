@@ -14,7 +14,8 @@ public class StatisticsPartTwo : ViewComponent
 
     public IViewComponentResult Invoke()
     {
-        ViewBag.LastBlog = _blogService.GetList().TakeLast(1).FirstOrDefault().Title;
+        var lastBlog = _blogService.GetList().TakeLast(1).FirstOrDefault();
+        ViewBag.LastBlog = lastBlog.Title;
         return View();
     }
 }

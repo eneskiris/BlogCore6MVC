@@ -12,6 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<IAboutService, AboutManager>();
 builder.Services.AddSingleton<IAboutDal, EfAboutRepository>();
 
+builder.Services.AddSingleton<IAdminService, AdminManager>();
+builder.Services.AddSingleton<IAdminDal, EfAdminRepository>();
+
 builder.Services.AddSingleton<IBlogService, BlogManager>();
 builder.Services.AddSingleton<IBlogDal, EfBlogRepository>();
 
