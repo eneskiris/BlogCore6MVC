@@ -15,9 +15,9 @@ public class ChartController : Controller
     public IActionResult CategoryChart()
     {
         List<CategoryChart> categoryCharts = new List<CategoryChart>();
-        categoryCharts.Add(new CategoryChart { CategoryName = "Game", CategoryCount = 12 });        
-        categoryCharts.Add(new CategoryChart { CategoryName = "Software", CategoryCount = 14 });        
-        categoryCharts.Add(new CategoryChart { CategoryName = "Sports", CategoryCount = 5 });
+        categoryCharts.Add(new CategoryChart { categoryname = "Game", categorycount = 12 });        
+        categoryCharts.Add(new CategoryChart { categoryname = "Software", categorycount = 14 });        
+        categoryCharts.Add(new CategoryChart { categoryname = "Sports", categorycount = 5 });
         return Json(new {jsonlist = categoryCharts});
     }
 }

@@ -5,8 +5,36 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <div id="chartdiv" style="width: 800px; height: 600px">
-            <h2>Chart</h2>
-        </div>
+        <div id="chartdiv" style="width: 800px; height: 600px"></div>
     </div>
 </div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(DrawonLoad);
+    
+    function DrawonLoad() {
+    $(function() {
+      $.ajax({
+      type:'GET',
+      url:'/Admin/Chart/CategoryChart/',
+      success:function(chartsdata) {
+        var jsonData = chartsdata.jsonlist;
+        var data = new google.visualization.DataTable();
+        
+        data.addColumn('string', 'categoryname');
+        data.addColumn('number', 'categorycount');
+        
+        for (var i = 0; i < jsonData.length; i++) {
+            data.addRow([jsonData[i].categoryname, jsonData[i].categorycount]);
+        }
+        
+        var chart = new google.visualization.PieChart(document.getElementById('chartdiv'));
+        chart.draw(data, { position:"top",fontsize:"16px",width: 800, height: 600, title: 'Category Chart' });
+      }
+      
+      })
+    })
+    }
+</script>
