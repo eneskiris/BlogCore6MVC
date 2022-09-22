@@ -37,4 +37,11 @@ public class WriterController : Controller
             FullName = "Ayşe Sönmez",
         },
     };
+    
+    public IActionResult GetWriterById(int writerId)
+    {
+        var writer = writers.FirstOrDefault(x => x.Id == writerId);
+        var jsonWriter = JsonConvert.SerializeObject(writer);
+        return Json(jsonWriter);
+    }
 }

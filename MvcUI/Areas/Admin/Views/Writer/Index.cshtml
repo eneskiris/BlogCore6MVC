@@ -5,9 +5,16 @@
 
 <h1>Ajax</h1>
 <br>
-<button type="button" id="btnGetList" class="btn btn-outline-primary">Author List</button>
+<button type="button" id="btnGetList" class="btn btn-outline-primary">Authors List</button>
+<button type="button" id="btnGetById" class="btn btn-outline-success">Author</button>
 <br><br>
 <div id="writerlist">Authors</div>
+<br>
+<div id="writer">Author</div>
+<br>
+<div>
+    <input class="form-control" type="text" id="writerId" placeholder="Enter the Author ID">
+</div>
 
 @section scripts
 {
@@ -29,5 +36,10 @@
           }
           });
         });
+        
+        $("#btnGetById").click(x => {
+            let id = $("#writerId").val();
+            console.log(id);
+        })
     </script>
 }
