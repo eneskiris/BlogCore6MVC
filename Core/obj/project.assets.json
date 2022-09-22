@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eneskiris/RiderProjects/CoreDemo/Core/Core.csproj",
+      "projectUniqueName": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Core/Core.csproj",
       "projectName": "Core",
-      "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/Core/Core.csproj",
+      "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Core/Core.csproj",
       "packagesPath": "/Users/eneskiris/.nuget/packages/",
-      "outputPath": "/Users/eneskiris/RiderProjects/CoreDemo/Core/obj/",
+      "outputPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/eneskiris/.nuget/NuGet/NuGet.Config"

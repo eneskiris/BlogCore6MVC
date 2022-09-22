@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nDRkaqmjqsLcxcMsaX79Y4ztG3CTuqDD5hgqKeDls1jJVcRnQamVs+tcWxqMiyg6Bl4iqUeiylwfNaJo0Bg6tg==",
+  "dgSpecHash": "B9Q9tBfQ/uPScnljWj5R1PgK3zLsn79D5pEakZMieokkmOD7bthvS36WOaMD333ctoum9YrbxSg6He6WyreMhg==",
   "success": true,
-  "projectFilePath": "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/MvcUI.csproj",
+  "projectFilePath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/MvcUI.csproj",
   "expectedPackageFiles": [
     "/Users/eneskiris/.nuget/packages/closedxml/0.96.0/closedxml.0.96.0.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/documentformat.openxml/2.16.0/documentformat.openxml.2.16.0.nupkg.sha512",

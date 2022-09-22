@@ -2035,11 +2035,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/DataAccess.csproj",
+      "projectUniqueName": "/Users/eneskiris/RiderProjects/BlogCore6MVC/DataAccess/DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/DataAccess.csproj",
+      "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/DataAccess/DataAccess.csproj",
       "packagesPath": "/Users/eneskiris/.nuget/packages/",
-      "outputPath": "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/",
+      "outputPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/DataAccess/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/eneskiris/.nuget/NuGet/NuGet.Config"
@@ -2054,8 +2054,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj": {
-              "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj"
+            "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj": {
+              "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj"
             }
           }
         }

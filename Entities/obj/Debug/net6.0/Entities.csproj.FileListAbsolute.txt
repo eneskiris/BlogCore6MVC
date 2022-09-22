@@ -10,3 +10,15 @@
 /Users/eneskiris/RiderProjects/CoreDemo/Entities/obj/Debug/net6.0/refint/Entities.dll
 /Users/eneskiris/RiderProjects/CoreDemo/Entities/obj/Debug/net6.0/Entities.pdb
 /Users/eneskiris/RiderProjects/CoreDemo/Entities/obj/Debug/net6.0/ref/Entities.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/bin/Debug/net6.0/Entities.deps.json
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/bin/Debug/net6.0/Entities.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/bin/Debug/net6.0/Entities.pdb
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/obj/Debug/net6.0/Entities.csproj.AssemblyReference.cache
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/obj/Debug/net6.0/Entities.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/obj/Debug/net6.0/Entities.AssemblyInfoInputs.cache
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/obj/Debug/net6.0/Entities.AssemblyInfo.cs
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/obj/Debug/net6.0/Entities.csproj.CoreCompileInputs.cache
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/obj/Debug/net6.0/Entities.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/obj/Debug/net6.0/refint/Entities.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/obj/Debug/net6.0/Entities.pdb
+/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/obj/Debug/net6.0/ref/Entities.dll

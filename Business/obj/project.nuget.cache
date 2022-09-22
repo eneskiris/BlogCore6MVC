@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "33waEFQzWz8zYpLUMJyuJ/kzoM20YKrC37Ddxg7gvKNewjNoRgd1sVY3mIodRIWYsmgnsinKzoonta3jsBz3RA==",
+  "dgSpecHash": "dF4N6zkpb+gaBRRkOvceZYNTrPl8AENNmqHZvYG+B6avIrqnh69y3ngmyEdWuB9XllADe/3126U6I4JULguTow==",
   "success": true,
-  "projectFilePath": "/Users/eneskiris/RiderProjects/CoreDemo/Business/Business.csproj",
+  "projectFilePath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Business/Business.csproj",
   "expectedPackageFiles": [
     "/Users/eneskiris/.nuget/packages/fluentvalidation/11.2.1/fluentvalidation.11.2.1.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/fluentvalidation.aspnetcore/11.2.2/fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",

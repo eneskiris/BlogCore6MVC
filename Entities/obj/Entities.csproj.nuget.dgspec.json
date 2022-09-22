@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj": {}
+    "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj": {}
   },
   "projects": {
-    "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj": {
+    "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj",
+        "projectUniqueName": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj",
+        "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj",
         "packagesPath": "/Users/eneskiris/.nuget/packages/",
-        "outputPath": "/Users/eneskiris/RiderProjects/CoreDemo/Entities/obj/",
+        "outputPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/eneskiris/.nuget/NuGet/NuGet.Config"

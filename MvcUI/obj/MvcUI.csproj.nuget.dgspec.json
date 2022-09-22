@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/MvcUI.csproj": {}
+    "/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/MvcUI.csproj": {}
   },
   "projects": {
-    "/Users/eneskiris/RiderProjects/CoreDemo/Business/Business.csproj": {
+    "/Users/eneskiris/RiderProjects/BlogCore6MVC/Business/Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eneskiris/RiderProjects/CoreDemo/Business/Business.csproj",
+        "projectUniqueName": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Business/Business.csproj",
         "projectName": "Business",
-        "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/Business/Business.csproj",
+        "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Business/Business.csproj",
         "packagesPath": "/Users/eneskiris/.nuget/packages/",
-        "outputPath": "/Users/eneskiris/RiderProjects/CoreDemo/Business/obj/",
+        "outputPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Business/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/eneskiris/.nuget/NuGet/NuGet.Config"
@@ -26,11 +26,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/DataAccess.csproj": {
-                "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/DataAccess.csproj"
+              "/Users/eneskiris/RiderProjects/BlogCore6MVC/DataAccess/DataAccess.csproj": {
+                "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/DataAccess/DataAccess.csproj"
               },
-              "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj": {
-                "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj"
+              "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj": {
+                "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj"
               }
             }
           }
@@ -70,14 +70,14 @@
         }
       }
     },
-    "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/DataAccess.csproj": {
+    "/Users/eneskiris/RiderProjects/BlogCore6MVC/DataAccess/DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/DataAccess.csproj",
+        "projectUniqueName": "/Users/eneskiris/RiderProjects/BlogCore6MVC/DataAccess/DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/DataAccess.csproj",
+        "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/DataAccess/DataAccess.csproj",
         "packagesPath": "/Users/eneskiris/.nuget/packages/",
-        "outputPath": "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/obj/",
+        "outputPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/DataAccess/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/eneskiris/.nuget/NuGet/NuGet.Config"
@@ -92,8 +92,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj": {
-                "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj"
+              "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj": {
+                "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj"
               }
             }
           }
@@ -149,14 +149,14 @@
         }
       }
     },
-    "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj": {
+    "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj",
+        "projectUniqueName": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj",
+        "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj",
         "packagesPath": "/Users/eneskiris/.nuget/packages/",
-        "outputPath": "/Users/eneskiris/RiderProjects/CoreDemo/Entities/obj/",
+        "outputPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/eneskiris/.nuget/NuGet/NuGet.Config"
@@ -202,14 +202,14 @@
         }
       }
     },
-    "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/MvcUI.csproj": {
+    "/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/MvcUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/MvcUI.csproj",
+        "projectUniqueName": "/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/MvcUI.csproj",
         "projectName": "MvcUI",
-        "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/MvcUI.csproj",
+        "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/MvcUI.csproj",
         "packagesPath": "/Users/eneskiris/.nuget/packages/",
-        "outputPath": "/Users/eneskiris/RiderProjects/CoreDemo/MvcUI/obj/",
+        "outputPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/eneskiris/.nuget/NuGet/NuGet.Config"
@@ -224,14 +224,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/eneskiris/RiderProjects/CoreDemo/Business/Business.csproj": {
-                "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/Business/Business.csproj"
+              "/Users/eneskiris/RiderProjects/BlogCore6MVC/Business/Business.csproj": {
+                "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Business/Business.csproj"
               },
-              "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/DataAccess.csproj": {
-                "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/DataAccess/DataAccess.csproj"
+              "/Users/eneskiris/RiderProjects/BlogCore6MVC/DataAccess/DataAccess.csproj": {
+                "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/DataAccess/DataAccess.csproj"
               },
-              "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj": {
-                "projectPath": "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj"
+              "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj": {
+                "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj"
               }
             }
           }

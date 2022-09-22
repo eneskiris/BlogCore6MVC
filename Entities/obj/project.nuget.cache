@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y6xD9lbK9V1GO+rPwTXZHzPRvA8A8Br1QfPDCTZ/tqlyjYSWGnG8GptklMRfhWCSArrssBUD7mMKrzhOLcbmbw==",
+  "dgSpecHash": "8KikkkD2KO+eObn128GVzxoY1GWXs15Q/IYOLtLiDKXOqLLTAKX8MGGjCr+yXABDa1DbDxk5M7ZChZrEsIO+Yw==",
   "success": true,
-  "projectFilePath": "/Users/eneskiris/RiderProjects/CoreDemo/Entities/Entities.csproj",
+  "projectFilePath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Entities/Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
