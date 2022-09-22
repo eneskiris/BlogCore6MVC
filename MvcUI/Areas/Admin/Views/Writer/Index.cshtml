@@ -19,7 +19,13 @@
           type:"GET",
           url:"/Admin/Writer/WriterList/",
           success:function (func){
-              console.log(func);
+              let jsonParse = jQuery.parseJSON(func);
+              let tablehtml = "<table class='table table-bordered'> <tr><th> Author Id</th> <th> Author Name </th> </tr>";
+              $.each(jsonParse,(index,value)=>{
+                  tablehtml += `<tr><td>${value.Id}</td> <td>${value.FullName}</td></tr>`
+              });
+              tablehtml +="</table>";
+              $("#writerlist").html(tablehtml);
           }
           });
         });
