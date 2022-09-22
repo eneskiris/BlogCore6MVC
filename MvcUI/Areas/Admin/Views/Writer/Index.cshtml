@@ -7,6 +7,7 @@
 <br>
 <button type="button" id="btnGetList" class="btn btn-outline-primary">Authors List</button>
 <button type="button" id="btnGetById" class="btn btn-outline-success">Author</button>
+<button type="button" id="btnAddWriter" class="btn btn-outline-info">Add New Author</button>
 <br><br>
 <div id="writerlist">Authors</div>
 <br>
@@ -14,6 +15,12 @@
 <br>
 <div>
     <input class="form-control" type="text" id="writerId" placeholder="Enter the Author ID">
+</div>
+<br>
+
+<div>
+    <input type="text" class="form-control" id="authorId" placeholder="Author Id">
+    <input type="text" class="form-control" id="authorName" placeholder="Author Full Name">
 </div>
 
 @section scripts
@@ -52,6 +59,22 @@
                 $("#writer").html(getValue);
             }
             })
+        })
+        
+        $("#btnAddWriter").click(function() {
+          let writer = {
+              Id: $("#authorId").val(),
+              FullName: $("#authorName").val()
+          };
+          $.ajax({
+          type : "POST",
+          url : "/Admin/Writer/AddWriter/",
+          data : writer,
+          success : function(func) {
+            let result = jQuery.parseJSON(func);
+            alert("Author was added")
+          }
+          })
         })
     </script>
 }

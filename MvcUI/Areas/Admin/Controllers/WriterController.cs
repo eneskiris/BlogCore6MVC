@@ -13,6 +13,13 @@ public class WriterController : Controller
         return View();
     }
 
+    [HttpPost]
+    public IActionResult AddWriter(WriterModel writer)
+    {
+        writers.Add(writer);
+        var jsonWriters = JsonConvert.SerializeObject(writer);
+        return Json(jsonWriters);
+    }
     public IActionResult WriterList()
     {
         var jsonWriters = JsonConvert.SerializeObject(writers);
