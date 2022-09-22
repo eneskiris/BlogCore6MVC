@@ -46,8 +46,10 @@
             url:"/Admin/Writer/GetWriterById/",
             data:{writerId:id},
             success:function (func){
-                let jsonParse = jQuery.parseJSON(func);
-                console.log(jsonParse);
+                let writer = jQuery.parseJSON(func);
+                let getValue=`<table class="table table-bordered"> <tr><th>Author Id</th> <th>Author Full Name</th 
+                ></tr> <tr><td>${writer.Id}</td><td>${writer.FullName}</td></tr></table>`;
+                $("#writer").html(getValue);
             }
             })
         })
