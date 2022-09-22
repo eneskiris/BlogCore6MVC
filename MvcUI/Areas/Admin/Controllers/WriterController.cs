@@ -20,6 +20,13 @@ public class WriterController : Controller
         var jsonWriters = JsonConvert.SerializeObject(writer);
         return Json(jsonWriters);
     }
+
+    public IActionResult DeleteWriter(int id)
+    {
+        var writer = writers.FirstOrDefault(x => x.Id == id);
+        writers.Remove(writer);
+        return Json(writer);
+    }
     public IActionResult WriterList()
     {
         var jsonWriters = JsonConvert.SerializeObject(writers);

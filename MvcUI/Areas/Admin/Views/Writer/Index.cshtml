@@ -8,8 +8,9 @@
 <button type="button" id="btnGetList" class="btn btn-outline-primary">Authors List</button>
 <button type="button" id="btnGetById" class="btn btn-outline-success">Author</button>
 <button type="button" id="btnAddWriter" class="btn btn-outline-info">Add New Author</button>
+<button type="button" id="btnRemoveWriter" class="btn btn-outline-danger">Remove Author</button>
 <br><br>
-<div id="writerlist">Authors</div>
+<div id="writerlist"></div>
 <br>
 <div id="writer">Author</div>
 <br>
@@ -17,11 +18,19 @@
     <input class="form-control" type="text" id="writerId" placeholder="Enter the Author ID">
 </div>
 <br>
-
+<div>Add New Author</div>
+<br>
 <div>
     <input type="text" class="form-control" id="authorId" placeholder="Author Id">
     <input type="text" class="form-control" id="authorName" placeholder="Author Full Name">
 </div>
+<br>
+<div>Remove Author</div>
+<br>
+<div>
+    <input type="text" class="form-control" id="txtId" placeholder="Author Id">
+</div>
+
 
 @section scripts
 {
@@ -75,6 +84,18 @@
             alert("Author was added")
           }
           })
+        })
+        
+        $("#btnRemoveWriter").click(x => {
+                let id = $("#txtId").val();
+                $.ajax({
+                url:"/Admin/Writer/DeleteWriter/" + id,
+                type:"POST",
+                dataType:"json",
+                success:function(func) {
+                alert("Author was deleted")            
+            }
+            })
         })
     </script>
 }
