@@ -5,11 +5,19 @@
 
 <h1>Ajax</h1>
 <br>
+
 <button type="button" id="btnGetList" class="btn btn-outline-primary">Authors List</button>
+
 <button type="button" id="btnGetById" class="btn btn-outline-success">Author</button>
+
 <button type="button" id="btnAddWriter" class="btn btn-outline-info">Add New Author</button>
+
 <button type="button" id="btnRemoveWriter" class="btn btn-outline-danger">Remove Author</button>
-<br><br>
+
+<button type="button" id="btnUpdateWriter" class="btn btn-outline-warning">Update Author</button>
+
+<br> <br>
+
 <div id="writerlist"></div>
 <br>
 <div id="writer">Author</div>
@@ -18,19 +26,28 @@
     <input class="form-control" type="text" id="writerId" placeholder="Enter the Author ID">
 </div>
 <br>
-<div>Add New Author</div>
+
+<div>Add Author</div>
+<input type="text" id="newAuthorName" class="form-control" placeholder="Author Full Name">
+<input type="text" id="newAuthorAbout" class="form-control" placeholder="Author About">
+<input type="text" id="newAuthorImage" class="form-control" placeholder="Author Image">
+<input type="text" id="newAuthorEmail" class="form-control" placeholder="Author Email">
+<input type="text" id="newAuthorPassword" class="form-control" placeholder="Author Password">
 <br>
-<div>
-    <input type="text" class="form-control" id="authorId" placeholder="Author Id">
-    <input type="text" class="form-control" id="authorName" placeholder="Author Full Name">
-</div>
+
+<div>Update Author</div>
+<input type="text" id="updateAuthorId" class="form-control" placeholder="Author Id">
+<input type="text" id="updateAuthorName" class="form-control" placeholder="Author Full Name">
+<input type="text" id="updateAuthorAbout" class="form-control" placeholder="Author About">
+<input type="text" id="updateAuthorImage" class="form-control" placeholder="Author Image">
+<input type="text" id="updateAuthorEmail" class="form-control" placeholder="Author Email">
+<input type="text" id="updateAuthorPassword" class="form-control" placeholder="Author Password">
 <br>
+
 <div>Remove Author</div>
 <br>
 <div>
-    <input type="text" class="form-control" id="txtId" placeholder="Author Id">
-</div>
-
+<input class="form-control" type="text" id="txtId" placeholder="Author Id"></div>
 
 @section scripts
 {
@@ -45,7 +62,7 @@
               let jsonParse = jQuery.parseJSON(func);
               let tablehtml = "<table class='table table-bordered'> <tr><th> Author Id</th> <th> Author Name </th> </tr>";
               $.each(jsonParse,(index,value)=>{
-                  tablehtml += `<tr><td>${value.Id}</td> <td>${value.FullName}</td></tr>`
+                  tablehtml += `<tr><td>${value.WriterId}</td> <td>${value.FullName}</td></tr>`
               });
               tablehtml +="</table>";
               $("#writerlist").html(tablehtml);
@@ -64,7 +81,7 @@
             success:function (func){
                 let writer = jQuery.parseJSON(func);
                 let getValue=`<table class="table table-bordered"> <tr><th>Author Id</th> <th>Author Full Name</th 
-                ></tr> <tr><td>${writer.Id}</td><td>${writer.FullName}</td></tr></table>`;
+                ></tr> <tr><td>${writer.WriterId}</td><td>${writer.FullName}</td></tr></table>`;
                 $("#writer").html(getValue);
             }
             })
@@ -72,15 +89,18 @@
         
         $("#btnAddWriter").click(function() {
           let writer = {
-              Id: $("#authorId").val(),
-              FullName: $("#authorName").val()
+              FullName: $("#newAuthorName").val(),
+              About: $("#newAuthorAbout").val(),
+              Image: $("#newAuthorImage").val(),
+              Email: $("#newAuthorEmail").val(),
+              Password: $("#newAuthorPassword").val(),
+              Status: true
           };
           $.ajax({
           type : "POST",
           url : "/Admin/Writer/AddWriter/",
-          data : writer,
+          data : {writer},
           success : function(func) {
-            let result = jQuery.parseJSON(func);
             alert("Author was added")
           }
           })
@@ -89,13 +109,34 @@
         $("#btnRemoveWriter").click(x => {
                 let id = $("#txtId").val();
                 $.ajax({
-                url:"/Admin/Writer/DeleteWriter/" + id,
+                url:"/Admin/Writer/DeleteWriter/",
                 type:"POST",
                 dataType:"json",
+                data:{ writerId:id },
                 success:function(func) {
                 alert("Author was deleted")            
             }
             })
         })
+        
+        $("#btnUpdateWriter").click(function() {
+          let writer = {
+              WriterId:$("#updateAuthorId").val(),
+              FullName: $("#updateAuthorName").val(),
+              About: $("#updateAuthorAbout").val(),
+              Image: $("#updateAuthorImage").val(),
+              Email: $("#updateAuthorEmail").val(),
+              Password: $("#updateAuthorPassword").val(),
+              Status: true
+          };
+          $.ajax({
+          type: "POST",
+          url: "/Admin/Writer/UpdateWriter/",
+          data: {writer},
+          success: function(func) {
+            alert("Author was updated")
+          }
+          });
+        });
     </script>
 }
