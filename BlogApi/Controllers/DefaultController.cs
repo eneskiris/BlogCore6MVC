@@ -12,13 +12,24 @@ namespace BlogApi.Controllers
     [ApiController]
     public class DefaultController : ControllerBase
     {
-        [HttpGet]
+        [HttpGet("getall")]
         public IActionResult EmployeeList()
         {
             using (var context = new BlogApiDemoContext())
             {
                 var values = context.Employees.ToList();
                 return Ok(values);
+            }
+        }
+
+        [HttpPost("addemployee")]
+        public IActionResult AddEmployee(Employee employee)
+        {
+            using ( var context = new BlogApiDemoContext())
+            {
+                context.Add(employee);
+                context.SaveChanges();
+                return Ok();
             }
         }
     }
