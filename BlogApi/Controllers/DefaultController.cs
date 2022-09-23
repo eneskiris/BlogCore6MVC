@@ -22,6 +22,20 @@ namespace BlogApi.Controllers
             }
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetEmployeeById(int id)
+        {
+            using (var context = new BlogApiDemoContext())
+            {
+                var employee = context.Employees.Find(id);
+                if (employee==null)
+                {
+                    return NotFound();
+                }
+                return Ok(employee);
+            }
+        }
+        
         [HttpPost("addemployee")]
         public IActionResult AddEmployee(Employee employee)
         {
