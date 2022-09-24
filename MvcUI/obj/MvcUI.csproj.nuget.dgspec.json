@@ -25,7 +25,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/eneskiris/RiderProjects/BlogCore6MVC/Business/Business.csproj": {
+                "projectPath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/Business/Business.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

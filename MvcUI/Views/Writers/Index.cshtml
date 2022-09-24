@@ -1,0 +1,35 @@
+@model List<Entities.Concrete.Writer>?
+
+@{
+    ViewBag.Title = "title";
+    Layout = "/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Full Name</th>
+        <th>About</th>
+        <th>Image</th>
+        <th>Email</th>
+        <th>Status</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.WriterId</td>
+            <td>@item.FullName</td>
+            <td>@item.About</td>
+            <td>@item.Image</td>
+            <td>@item.Email</td>
+            <td>@item.Status</td>
+            <td><a asp-controller="Writers" asp-action="Delete" asp-route-id="@item.WriterId" class="btn 
+            btn-outline-danger">Delete</a></td>
+            <td><a asp-controller="Writers" asp-action="Edit" asp-route-id="@item.WriterId" class="btn 
+            btn-outline-warning">Edit</a></td>
+        </tr>
+    }
+</table>
+<a href="/Writers/Add">New Writer</a>

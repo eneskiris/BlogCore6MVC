@@ -1,12 +1,12 @@
-@model MvcUI.Controllers.TempClass
+@model Entities.Concrete.Writer
 @{
     ViewBag.Title = "title";
     Layout = "/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
 
 <form action="" method="post">
-    <label for="">Employee Full Name</label>
-    <input type="text" asp-for="Name" class="form-control" />
+    <label for="">Writer Full Name</label>
+    <input type="text" asp-for="FullName" class="form-control" />
     <br>
     <button type="submit" class="btn btn-info">Add New Employee</button>
 </form>

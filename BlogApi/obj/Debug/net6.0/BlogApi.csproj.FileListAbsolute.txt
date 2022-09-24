@@ -259,3 +259,12 @@
 /Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Microsoft.Build.Locator.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/FluentValidation.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Business.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/DataAccess.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Entities.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Business.pdb
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/DataAccess.pdb
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Entities.pdb

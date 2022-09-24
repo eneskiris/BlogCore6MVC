@@ -2352,6 +2352,7 @@
       },
       "BlogApi/1.0.0": {
         "dependencies": {
+          "Business": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.8",

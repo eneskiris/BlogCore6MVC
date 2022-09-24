@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "z/7fM50mvdFnkvbMsFwNdcl/9DfoAAj7sgLrKqAW/XNYw+z0nkKetmqEsOGHwG7GgAAQ5/lJ5cqeZRA6n3iotQ==",
+  "dgSpecHash": "8ZxqV+1l6mNMqi9D5ZHGHk6qn8Hqw1vr5nnEih9aDdYHXT1VXstPJ6DTSU+lvH03p5E8Z+4YZblyvAG898xLTA==",
   "success": true,
   "projectFilePath": "/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/BlogApi.csproj",
   "expectedPackageFiles": [
+    "/Users/eneskiris/.nuget/packages/fluentvalidation/11.2.1/fluentvalidation.11.2.1.nupkg.sha512",
+    "/Users/eneskiris/.nuget/packages/fluentvalidation.aspnetcore/11.2.2/fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "/Users/eneskiris/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.1/fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",
     "/Users/eneskiris/.nuget/packages/messagepack.annotations/2.1.152/messagepack.annotations.2.1.152.nupkg.sha512",
