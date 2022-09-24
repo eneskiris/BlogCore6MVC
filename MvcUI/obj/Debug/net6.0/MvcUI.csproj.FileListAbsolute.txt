@@ -552,3 +552,12 @@
 /Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/obj/Debug/net6.0/MvcUI.pdb
 /Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/obj/Debug/net6.0/MvcUI.genruntimeconfig.cache
 /Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/obj/Debug/net6.0/ref/MvcUI.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/bin/Debug/net6.0/BlogApi.deps.json
+/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/bin/Debug/net6.0/BlogApi.runtimeconfig.json
+/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/bin/Debug/net6.0/BlogApi
+/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/bin/Debug/net6.0/Microsoft.OpenApi.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/bin/Debug/net6.0/BlogApi.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/bin/Debug/net6.0/BlogApi.pdb

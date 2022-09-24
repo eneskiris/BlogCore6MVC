@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "h1E99biS1eLc3y2wD61F2fe9V0mv0SyXwyDxXnr5nG8=",
+  "Hash": "0UlBDCCcCWUtjuDZgdKQ2dHH0UHm5xZtBTX/gvqXFus=",
   "Source": "MvcUI",
   "BasePath": "_content/MvcUI",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/BlogApi.csproj",
+      "Version": 2,
+      "Source": "BlogApi",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "MvcUI/wwwroot",

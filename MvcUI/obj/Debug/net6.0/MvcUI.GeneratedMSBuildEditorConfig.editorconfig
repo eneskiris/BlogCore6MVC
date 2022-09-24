@@ -119,6 +119,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/Views/Employee/AddEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWUvQWRkRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWUvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/Views/ErrorPage/Error404.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXJyb3JQYWdlL0Vycm9yNDA0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
