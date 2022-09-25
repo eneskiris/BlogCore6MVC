@@ -1,28 +1,30 @@
 using Entities.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete;
 
-public class BlogDemoContext : DbContext
+public class BlogDemoContext : IdentityDbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer(@"Server=localhost;Database=BlogDemo;User=sa;Password=Enes35.*;");
     }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder builder)
     {
-        modelBuilder.Entity<MessageWithWriter>()
-                    .HasOne(x => x.SenderUser)
-                    .WithMany(y => y.WriterSender)
-                    .HasForeignKey(z => z.SenderId)
-                    .OnDelete(DeleteBehavior.ClientSetNull);
+        builder.Entity<MessageWithWriter>()
+               .HasOne(x => x.SenderUser)
+               .WithMany(y => y.WriterSender)
+               .HasForeignKey(z => z.SenderId)
+               .OnDelete(DeleteBehavior.ClientSetNull);
 
-        modelBuilder.Entity<MessageWithWriter>()
-                    .HasOne(x => x.ReceiverUser)
-                    .WithMany(y => y.WriterReceiver)
-                    .HasForeignKey(z => z.ReceiverId)
-                    .OnDelete(DeleteBehavior.ClientSetNull);
+        builder.Entity<MessageWithWriter>()
+               .HasOne(x => x.ReceiverUser)
+               .WithMany(y => y.WriterReceiver)
+               .HasForeignKey(z => z.ReceiverId)
+               .OnDelete(DeleteBehavior.ClientSetNull);
+        base.OnModelCreating(builder);
     }
 
     public DbSet<About> Abouts { get; set; }
