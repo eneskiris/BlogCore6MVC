@@ -1,7 +1,9 @@
 using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Abstract;
+using DataAccess.Concrete;
 using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -52,9 +54,11 @@ builder.Services.AddMvcCore();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
        .AddCookie(x => { x.LoginPath = "/Login/Index"; });
 // builder.Services.AddSession();
+builder.Services.AddDbContext<BlogDemoContext>();
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<BlogDemoContext>();
 
 var app = builder.Build();
-AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+// AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

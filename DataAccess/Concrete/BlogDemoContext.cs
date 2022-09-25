@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete;
 
-public class BlogDemoContext : IdentityDbContext
+public class BlogDemoContext : IdentityDbContext<AppUser,AppRole,int>
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

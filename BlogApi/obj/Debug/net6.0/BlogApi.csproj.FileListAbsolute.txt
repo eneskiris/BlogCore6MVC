@@ -268,3 +268,8 @@
 /Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Business.pdb
 /Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/DataAccess.pdb
 /Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Entities.pdb
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Microsoft.Extensions.Identity.Core.dll
+/Users/eneskiris/RiderProjects/BlogCore6MVC/BlogApi/bin/Debug/net6.0/Microsoft.Extensions.Identity.Stores.dll
