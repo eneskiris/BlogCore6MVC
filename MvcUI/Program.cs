@@ -55,7 +55,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
        .AddCookie(x => { x.LoginPath = "/Login/Index"; });
 // builder.Services.AddSession();
 builder.Services.AddDbContext<BlogDemoContext>();
-builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<BlogDemoContext>();
+builder.Services.AddIdentity<AppUser, AppRole>(x =>
+                                               {
+                                                   x.Password.RequireUppercase = false;
+                                                    x.Password.RequireNonAlphanumeric = false;
+                                               }).AddEntityFrameworkStores<BlogDemoContext>();
 
 var app = builder.Build();
 // AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
