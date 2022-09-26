@@ -2,6 +2,7 @@ using Business.Abstract;
 using Business.ValidationRules;
 using Entities.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -12,8 +13,8 @@ public class BlogController : Controller
     private IBlogService _blogService;
     private ICategoryService _categoryService;
     private IWriterService _writerService;
-    private BlogValidator blogValidator = new BlogValidator();
-    private ValidationResult validationResult = new ValidationResult();
+    private BlogValidator blogValidator = new();
+    private ValidationResult validationResult = new();
 
     public BlogController(IBlogService blogService, ICategoryService categoryService, IWriterService writerService)
     {
@@ -22,12 +23,14 @@ public class BlogController : Controller
         _writerService = writerService;
     }
 
+    [AllowAnonymous]
     public IActionResult Index()
     {
         var values = _blogService.GetListWithCategory();
         return View(values);
     }
 
+    [AllowAnonymous]
     public IActionResult ReadAll(int id)
     {
         ViewBag.Id = id;
