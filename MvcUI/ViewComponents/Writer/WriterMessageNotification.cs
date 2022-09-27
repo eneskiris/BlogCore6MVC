@@ -8,16 +8,18 @@ namespace MvcUI.ViewComponents.Writer;
 public class WriterMessageNotification : ViewComponent
 {
     private IMessageWithWriterService _messageWithWriterService;
+    private IWriterService _writerService;
 
-    public WriterMessageNotification(IMessageWithWriterService messageWithWriterService)
+    public WriterMessageNotification(IMessageWithWriterService messageWithWriterService, IWriterService writerService)
     {
         _messageWithWriterService = messageWithWriterService;
+        _writerService = writerService;
     }
 
     public IViewComponentResult Invoke()
     {
-        int id = 2;
-        var values = _messageWithWriterService.GetInboxListByWriter(id);
+        var writerId = _writerService.GetWriterByEmail(User.Identity.Name).WriterId;
+        var values = _messageWithWriterService.GetInboxListByWriter(writerId);
         return View(values);
     }
 }
