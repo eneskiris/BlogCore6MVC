@@ -2,10 +2,9 @@ using System.Security.Claims;
 using Business.Abstract;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using MvcUI.Models;
 
 namespace MvcUI.Controllers;
 
@@ -53,5 +52,10 @@ public class LoginController : Controller
             return RedirectToAction("Index", "Dashboard");
         }
         return View();
+    }
+    public IActionResult WriterLogout()
+    {
+        HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        return RedirectToAction("Index", "Blog");
     }
 }

@@ -7,16 +7,19 @@ namespace MvcUI.Controllers;
 public class MessageController : Controller
 {
     private IMessageWithWriterService _messageWithWriterService;
+
+    private IWriterService _writerService;
     // GET
-    public MessageController(IMessageWithWriterService messageWithWriterService)
+    public MessageController(IMessageWithWriterService messageWithWriterService, IWriterService writerService)
     {
         _messageWithWriterService = messageWithWriterService;
+        _writerService = writerService;
     }
 
     public IActionResult Inbox()
     {
-        int id = 2;
-        var values = _messageWithWriterService.GetInboxListByWriter(id);
+        var writerId = _writerService.GetWriterByEmail(User.Identity.Name).WriterId;
+        var values = _messageWithWriterService.GetInboxListByWriter(writerId);
         return View(values);
     }
     
