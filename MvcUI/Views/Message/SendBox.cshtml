@@ -4,12 +4,13 @@
     ViewBag.Title = "title";
     Layout = "WriterLayout";
 }
-<h1>Inbox</h1>
+
+<h1>Sendbox</h1>
 <table class="table table-bordered">
     <tr>
         <th>#</th>
         <th>Content</th>
-        <th>Sender</th>
+        <th>Receiver</th>
         <th>Date</th>
         <th>Open</th>
     </tr>
@@ -18,7 +19,7 @@
         <tr>
             <td>@item.MessageId</td>
             <td>@item.Subject</td>
-            <td>@item.SenderUser.FullName</td>
+            <td>@item.ReceiverUser.FullName</td>
             <td>@item.Date.ToString("yyyy-M-d dddd")</td>
             <td>
                 <a asp-controller="Message" asp-action="MessageDetails" asp-route-id="@item.MessageId" class="btn 

@@ -4,6 +4,7 @@ namespace DataAccess.Abstract;
 
 public interface IMessageWithWriterDal : IGenericDal<MessageWithWriter>
 {
-    List<MessageWithWriter> GetListWithMessageByWriter(int id);
+    List<MessageWithWriter> GetInboxListByWriter(int id);
+    List<MessageWithWriter> GetSendBoxListByWriter(int id);
 
 }

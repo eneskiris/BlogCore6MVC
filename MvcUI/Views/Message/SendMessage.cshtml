@@ -1,0 +1,20 @@
+@model Entities.Concrete.MessageWithWriter
+
+@{
+    ViewBag.Title = "title";
+    Layout = "WriterLayout";
+}
+
+<h1>New Message</h1>
+<form asp-action="SendMessage" asp-controller="Message" method="post">
+    <label>Receiver</label>
+    <input type="text" class="form-control" asp-for="ReceiverId" required="">
+    <br>    
+    <label>Subject</label>
+    <input type="text" class="form-control" asp-for="Subject" required="">
+    <br>    
+    <label>Message</label>
+    <input type="text" class="form-control" asp-for="Details" required="">
+    <br>
+    <button class="btn btn-primary">Send Message</button>
+</form>

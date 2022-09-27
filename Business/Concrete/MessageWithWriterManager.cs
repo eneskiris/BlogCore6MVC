@@ -15,7 +15,7 @@ public class MessageWithWriterManager : IMessageWithWriterService
 
     public void Add(MessageWithWriter entity)
     {
-        throw new NotImplementedException();
+        _messageWithWriterDal.Insert(entity);
     }
 
     public void Delete(MessageWithWriter entity)
@@ -40,6 +40,11 @@ public class MessageWithWriterManager : IMessageWithWriterService
 
     public List<MessageWithWriter> GetInboxListByWriter(int id)
     {
-        return _messageWithWriterDal.GetListWithMessageByWriter(id);
+        return _messageWithWriterDal.GetInboxListByWriter(id);
+    }
+
+    public List<MessageWithWriter> GetSendBoxListByWriter(int id)
+    {
+        return _messageWithWriterDal.GetSendBoxListByWriter(id);
     }
 }
