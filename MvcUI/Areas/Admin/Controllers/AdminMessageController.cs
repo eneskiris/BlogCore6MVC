@@ -1,4 +1,5 @@
 using Business.Abstract;
+using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MvcUI.Areas.Admin.Controllers;
@@ -29,8 +30,22 @@ public class AdminMessageController : Controller
         return View(values);
     }
 
+    [HttpGet]
     public IActionResult ComposeMessage()
     {
         return View();
+    }    
+    
+    [HttpPost]
+    public IActionResult ComposeMessage(MessageWithWriter message)
+    {
+        var writerId = _writerService.GetWriterByEmail(User.Identity.Name).WriterId;
+        var values = _messageWithWriterService.GetSendBoxListByWriter(writerId);
+        message.SenderId = writerId;
+        message.ReceiverId = 2;
+        message.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+        message.Status = true;
+        _messageWithWriterService.Add(message);
+        return RedirectToAction("SendBox");
     }
 }
