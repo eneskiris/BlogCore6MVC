@@ -27,4 +27,9 @@ public class CommentManager : ICommentService
     {
         return _commentDal.GetAll(x => x.BlogId == id);
     }
+
+    public List<Comment> GetListWithBlog()
+    {
+        return _commentDal.GetListWithBlog();
+    }
 }
