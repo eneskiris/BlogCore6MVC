@@ -15,8 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/Areas/Admin/Views/AdminMessage/ComposeMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWRtaW5NZXNzYWdlL0NvbXBvc2VNZXNzYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/Areas/Admin/Views/AdminMessage/Inbox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWRtaW5NZXNzYWdlL0luYm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/Areas/Admin/Views/AdminMessage/SendBox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWRtaW5NZXNzYWdlL1NlbmRCb3guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/eneskiris/RiderProjects/BlogCore6MVC/MvcUI/Areas/Admin/Views/Blog/BlogListExcel.cshtml]

@@ -23,7 +23,7 @@
                         <a asp-area="Admin" asp-controller="AdminMessage" asp-action="Inbox"> <i class="fa fa-inbox "></i> Inbox <span class="label label-warning float-right">16</span> </a>
                     </li>
                     <li>
-                        <a asp-area="Admin" asp-controller="AdminMessage" asp-action="SendBox"> <i class="fa fa-envelope-o"></i> Sendbox</a>
+                        <a asp-area="Admin" asp-controller="AdminMessage" asp-action="SendBox"> <i class="fa fa-envelope-o"></i> SendBox</a>
                     </li>
                     <li>
                         <a href="mailbox.html"> <i class="fa fa-certificate"></i> Important</a>
@@ -72,7 +72,7 @@
         </div>
     </form>
     <h2>
-        Inbox (0)
+        Sendbox (0)
     </h2>
     <div class="mail-tools tooltip-demo m-t-md">
         <div class="btn-group float-right">
@@ -108,7 +108,7 @@
                 <input type="checkbox" class="i-checks">
             </td>
             <td class="mail-ontact">
-                <a href="mail_detail.html">@item.SenderUser.FullName</a>
+                <a href="mail_detail.html">@item.ReceiverUser.FullName</a>
             </td>
             <td class="mail-subject">
                 <a href="mail_detail.html">@item.Subject</a>
