@@ -1,9 +1,7 @@
 using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Abstract;
-using DataAccess.Concrete;
 using DataAccess.Concrete.EntityFramework;
-using Entities.Concrete;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
